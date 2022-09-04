@@ -1,0 +1,60 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Add Internship
+{%endblock%}
+
+{%block content%}
+
+
+
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+
+    <div class="form-style-3" >
+<form method="POST" >
+{% if messages %}
+  <div id='hideMe'>>
+    {% for message in messages %}
+
+    <p class="p-2 mb-2 bg-success text-white hideMe" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+  </div>
+              {% endif %}
+{% csrf_token %}
+<fieldset style="background:white;"><legend style="color:white;
+  background: #FF4433;">POST YOUR INTERNHSIP</legend>
+    <label ><span>Company Name <span class="required">*</span></span><input type="text" style="border-radius:30px " class="input-field" placeholder="Comapny Name" name="company_name" required /></label>
+
+    <label ><span>Email <span class="required">*</span></span><input type="email" style="border-radius:30px " class="input-field" placeholder="Use Same Email Address That You Used  During Signup" name="email_address" required /></label>
+
+<label ><span>Internship Type <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" name="internship_type"  placeholder="Full Time Job/Part Time Job" required /></label>
+<label ><span>Internship Title <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" name="internship_title"  placeholder="Designer/Developer Etc..."  required  /></label>
+<label ><span>Required Skill <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" name="required_skill"   placeholder="Skills" required /></label>
+<label ><span> Experience Requirements <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field"  placeholder="Experience Required"  required name="experience_requirements" value="" /></label>
+<label ><span>Internship Description <span class="required">*</span></span>
+    <textarea  placeholder="Description" name="internship_description" class="textarea-field" style="border-radius:30px " required></textarea></label>
+<label ><span>Responsibilities <span class="required">*</span></span><input type="text" style="border-radius:30px " class="input-field"  placeholder="Responsibilities" required name="responsibilities"  /></label>
+<label ><span>Work Mode <span class="required">*</span></span><input type="text" style="border-radius:30px " class="input-field"  placeholder="In Office/Online" required name="work_mode"  /></label>
+<label ><span>About Company <span class="required">*</span></span><textarea style="border-radius:30px " name="about_company"  placeholder="About Company" required class="textarea-field"></textarea></label>
+
+
+                <label ><span>Location <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="location"   placeholder="location" /></label>
+
+<label ><span>No Of Positions <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="no_of_positions"   placeholder="No of Positions" /></label>
+<label ><span>Stipend <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="stipend"   placeholder="Stipend" /></label>
+<label ><span>Appliaction Deadline <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field"  placeholder="Application Deadline" required name="application_deadline"  /></label>
+
+<label ><span>Required Qualification <span class="required">*</span></span><textarea style="border-radius:30px " name="required_qualification"  placeholder="Quallification" required class="textarea-field"></textarea></label>
+<label style="text-align:center"><span> </span><input type="submit" style="border-radius:30px;color:white;background: #FF4433;" value="Submit" /></label>
+</fieldset>
+</form>
+</div>
+</div>
+    </div>
+</div>
+
+{%endblock%}

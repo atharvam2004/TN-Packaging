@@ -1,0 +1,222 @@
+carousel-item {
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.carousel-caption {
+  bottom: 10px;
+}
+
+.carousel-caption h5 {
+  font-size: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: auto;
+}
+
+.carousel-caption p {
+  width: 75%;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.navbar-light .navbar-brand {
+  color: #fff;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: white;
+}
+
+.navbar-toggler {
+  background: #fff;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-link {
+  padding: .2rem 1rem;
+}
+
+.nav-link.active,.nav-link:focus{
+  color: #fff;
+}
+
+.navbar-toggler {
+  padding: 1px 5px;
+  font-size: 18px;
+  line-height: 0.3;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+ {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}sition: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+.headlogo {
+  font-family: 'Tangerine', black;
+  font-size: 28px;
+  text-color:black;
+  text-shadow: 4px 4px 4px black;
+}
+h2 {
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
+}/*
+  https://developer.mozilla.org/en/docs/Web/CSS/box-shadow
+  box-shadow: [inset?] [top] [left] [blur] [size] [color];
+
+  Tips:
+    - We're setting all the blurs to 0 since we want a solid fill.
+    - Add the inset keyword so the box-shadow is on the inside of the element
+    - Animating the inset shadow on hover looks like the element is filling in from whatever side you specify ([top] and [left] accept negative values to become [bottom] and [right])
+    - Multiple shadows can be stacked
+    - If you're animating multiple shadows, be sure to keep the same number of shadows so the animation is smooth. Otherwise, you'll get something choppy.
+*/
+
+// Animate the size, inside
+.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+// Animate the size, outside
+.pulse:hover,
+.pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em rgba(#fff,0);
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--hover); }
+}
+
+// Stack multiple shadows, one from the left, the other from the right
+.close:hover,
+.close:focus {
+  box-shadow:
+    inset -3.5em 0 0 0 var(--hover),
+    inset 3.5em 0 0 0 var(--hover);
+}
+
+// Size can also be negative; see how it's smaller than the element
+.raise:hover,
+.raise:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
+}
+
+// Animating from the bottom
+.up:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 var(--hover);
+}
+
+// And from the left
+.slide:hover,
+.slide:focus {
+  box-shadow: inset 6.5em 0 0 0 var(--hover);
+}
+
+// Multiple shadows, one on the outside, another on the inside
+.offset {
+  box-shadow:
+    0.3em 0.3em 0 0 var(--color),
+    inset 0.3em 0.3em 0 0 var(--color);
+
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 0 0 0 var(--hover),
+      inset 6em 3.5em 0 0 var(--hover);
+  }
+}
+
+//=== Set button colors
+// If you wonder why use Sass vars or CSS custom properties...
+  // Make a map with the class names and matching colors
+$colors: (
+  fill: #a972cb,
+  pulse: #ef6eae,
+  close: #ff7f82,
+  raise: #ffa260,
+  up: #e4cb58,
+  slide: #8fc866,
+  offset: #19bc8b
+);
+
+// Sass variables compile to a static string; CSS variables are dynamic and inherited
+  // Loop through the map and set CSS custom properties using Sass variables
+@each $button, $color in $colors {
+  .#{$button} {
+    --color: #{$color};
+    --hover: #{adjust-hue($color, 45deg)};
+  }
+}
+
+// Now every button will have different colors as set above. We get to use the same structure, only changing the custom properties.
+button {
+  color: var(--color);
+  transition: 0.25s;
+
+  &:hover,
+  &:focus {
+    border-color: var(--hover);
+    color: #fff;
+  }
+}
+
+//=== Pen styling, ignore
+body {
+  color: #fff;
+  background: hsl(227, 10%, 10%);
+  font: 300 1em 'Fira Sans', sans-serif;
+
+  // Center everything ever
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+// Basic button styles
+button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+h1 { font-weight: 400; }
+

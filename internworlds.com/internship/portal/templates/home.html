@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no", initial-scale=1, shrink-to-fit=no">
+
+    <title>Interns Port@l</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Tangerine">
+
+      <script src=
+"https://kit.fontawesome.com/a6e2755b4d.js"
+                crossorigin="anonymous">
+        </script><link rel="stylesheet" href="{%static 'css/style-starter.css'%}">
+</head>
+<style>
+
+.heading {
+    text-align: center;
+    color: #454343;
+    font-size: 30px;
+    font-weight: 500;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    z-index: 999;
+}
+.white-heading{
+    color: #ffffff;
+}
+.heading:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    height: 40px;
+    width: 180px;
+    border-radius: 4px;
+    transform: translateX(-50%);
+    background: url(img/heading-line.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.white-heading:after {
+    background: url(https://i.ibb.co/d7tSD1R/heading-line-white.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.heading span {
+    font-size: 18px;
+    display: block;
+    font-weight: 500;
+}
+.white-heading span {
+    color: #ffffff;
+}
+/*-----Testimonial-------*/
+
+.testimonial:after {
+    position: absolute;
+    top: -0 !important;
+    left: 0;
+    content: " ";
+    background: url(img/testimonial.bg-top.png);
+    background-size: 100% 100px;
+    width: 100%;
+    height: 100px;
+    float: left;
+    z-index: 99;
+}
+
+.testimonial {
+    min-height: 375px;
+    position: relative;
+    background: url(https://i.ibb.co/PTJDkgb/testimonials.jpg);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center;
+        background-size: cover;
+}
+#testimonial4 .carousel-inner:hover{
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+#testimonial4 .carousel-inner:active{
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+#testimonial4 .carousel-inner .item{
+  overflow: hidden;
+}
+
+.testimonial4_indicators .carousel-indicators{
+  left: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  height: 20px;
+  bottom: 15px;
+  padding: 0 5px;
+  cursor: e-resize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+.testimonial4_indicators .carousel-indicators li{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  text-indent: 0;
+  margin: 2px 3px;
+  cursor: pointer;
+  display: inline-block;
+  background: #ffffff;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators .active{
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin: 2px 3px;
+  background-color: #9dd3af;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar{
+  height: 3px;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb{
+  background: #eeeeee;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+.testimonial4_control_button .carousel-control{
+  top: 175px;
+  opacity: 1;
+  width: 40px;
+  bottom: auto;
+  height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 38px;
+  text-shadow: none;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  -webkit-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: all 0.6s cubic-bezier(0.3,1,0,1);
+  transition: all 0.6s cubic-bezier(0.3,1,0,1);
+}
+.testimonial4_control_button .carousel-control.left{
+  left: 7%;
+  top: 50%;
+  right: auto;
+}
+.testimonial4_control_button .carousel-control.right{
+  right: 7%;
+  top: 50%;
+  left: auto;
+}
+.testimonial4_control_button .carousel-control.left:hover,
+.testimonial4_control_button .carousel-control.right:hover{
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.testimonial4_header{
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.testimonial4_header h4{
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial4_slide{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.testimonial4_slide img {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 136px;
+    height: 136px;
+    margin: auto;
+    display: block;
+    color: #f2f2f2;
+    font-size: 18px;
+    line-height: 46px;
+    text-align: center;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -o-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+    -webkit-box-shadow: -6px 6px 6px rgba(0, 0, 0, 0.23);
+}
+.testimonial4_slide p {
+    color: #ffffff;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 40px 0 20px 0;
+}
+.testimonial4_slide h4 {
+  color: #ffffff;
+  font-size: 22px;
+}
+
+.testimonial .carousel {
+	padding-bottom:50px;
+}
+.testimonial .carousel-control-next-icon, .testimonial .carousel-control-prev-icon {
+    width: 35px;
+    height: 35px;
+}
+.event {
+
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.event .content {
+    background: #F3D5B9;
+    color: #fff;
+    bottom: 0;
+    height: 68px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    transition: all .5s ease;
+    width: 100%;
+}
+
+.event h3 {
+    font: bold 1em/1.125em 'Montserrat', Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    height: 68px;
+    margin: 0;
+    padding-top: 20px;
+    text-transform: uppercase;
+}
+
+.event .rollover {
+    border-top: 1px solid #59E4DF;
+    font-size: .9375em;
+    line-height: 1.4em;
+    padding: 18px 20px;
+    opacity: 0;
+    transition: all .5s ease;
+}
+
+.event .rollover p {
+    margin: 0;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
+
+.event:hover .content {
+    background: rgba(93,67,27,.7);
+    height: 100%;
+}
+
+.event:hover .rollover {
+    opacity: 1;
+}
+body{
+font-family:helvetica;
+overflow-x: hidden;
+background-color:#e6e6ff
+}
+.button1 {
+  background-color: black /* Green */
+  border: none;
+  color: black;
+  padding: 10px;
+  border-radius:5px;
+  text-align: center;
+  font-size: 10px;
+
+}
+.headlogo {
+  font-family: 'Tangerine', white;
+  font-size: 28px;
+  text-color:white;
+  text-shadow: 4px 4px 4px white;
+}
+h2 {
+   position: absolute;
+   top: 200px;
+   left: 0;
+   width: 100%;
+}
+.caption {
+    font-family: 'serif';
+    font-size: 42px;
+    align:center
+}.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.carousel-caption{
+bottom:150px;}
+
+.carousel-caption h5{
+text-color:red;
+fontsize:15px;
+text-transform:uppercase;
+margin-top:35px
+}.divstyle {
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+ .center {
+                text-align: center;
+                width: 100%;
+            }.fill:hover,
+.fill:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+
+.container1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 30px;
+  margin: auto ;
+  text-align:center
+}
+
+.container1 .box {
+  position: relative;
+  height: 70%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container1 .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container1 .box:hover .icon {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.container1 .box .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5x;
+  color: #fff;
+}
+
+.container1 .box:hover .icon .fa {
+  font-size: 40px;
+}
+
+.container1 .box .content {
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.container1 .box:hover .content {
+  top: 100px;
+}
+
+.container1 .box .content h3 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.container1 .box .content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.container1 .box:nth-child(1) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(1) {
+  background-color: black;
+}
+
+.container1 .box:nth-child(2) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(2) {
+  background-color: black;
+}
+
+.container1 .box:nth-child(3) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(3) {
+  background-color: black;
+}
+
+.counter {
+    background-color:#5E8C88;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+    color:white;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #4ad1e5;
+}ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}.navbar-nav > li{
+  padding-left:10px;
+}
+.button5 {background-color: #555555;}
+
+/* cards*/
+/* Float four columns side by side */
+.column {
+margin-left:50px;
+ float: left;
+  width: 10%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+  padding: 16px;
+  width:50px
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.service-card{
+     background-color: #5E8C88;
+     border-radius:10px;
+     height: 100%;
+}
+.card-title{
+    color:white;
+}
+/* allignment of login dropdown items */
+.dropdown-item{
+       text-align: center;
+ }
+
+
+
+
+
+
+@import "compass/css3";
+
+// VARIALBLES
+// Demo colors:
+$demoMain: rgba(51, 153, 204,.2);
+$demoMainDark: rgba(51, 153, 204,.6);
+$demoBorder: #33cccc;
+$demoHolly: rgba(102, 51, 255, 0.1);
+$demoHollyDark: rgba(102, 51, 255, 0.25);
+
+
+body {
+  color: #404040;
+  font: 100 1em/150% "proxima-nova", Helvetica, sans-serif;
+}
+
+.wrapper{
+  max-width: 1200px;
+  margin: auto;
+  //border: 1px solid red;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 900;
+  color: #333;
+  margin: 1.5em 0 0.5em;
+}
+
+h1 {font-size: 2em;}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.5em;}
+h4 {font-size: 1.3em;}
+
+strong {font-weight: 600;}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: $demoMain;
+}
+
+.img-placeholder {
+  background-image: url("http://placehold.it/200x100/CC99CC/ffffff&text=Feature");
+  background-size: cover;
+  min-height: 100px;  // need to specify min-height and min-width
+  min-width: 100px;
+}
+
+/*Basic Grid Styles*/
+.Grid {
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.u-textCenter {
+ text-align: center;
+}
+.Grid-cell {
+  flex: 1;
+}
+
+.Demo {
+  padding: .8em 1em 0;
+  margin-bottom: 1em;
+  background: $demoMain;
+  transition: background-color 0.3s ease;
+  border: 1px solid $demoBorder;
+  border-radius: 3px;
+  &:after {
+    content: "";
+    display: block;
+    margin-top: .8em;
+    height: 1px;
+   }
+  &:hover {
+    background: $demoMainDark;
+  }
+}
+
+.Demo.Holly {
+    background: $demoHolly;
+    &:hover {
+      background: $demoHollyDark;
+    }
+  }
+
+
+
+// Grid Style Modifiers
+
+/* With gutters*/
+$gutter: 1em;
+.Grid--gutters {
+  margin-left: -$gutter;
+  .Grid-cell {
+    padding-left: $gutter;
+  }
+  .Grid--nested {
+    .Grid-cell:first-of-type {
+      .Demo {
+        margin-right: 1em;
+      }
+    }
+  }
+}
+
+
+
+
+/* Justify per row*/
+.Grid--right {
+  justify-content: flex-end;
+}
+.Grid--center {
+  justify-content: center;
+}
+
+/* Alignment per row */
+.Grid--top {
+  align-items: flex-start;
+}
+.Grid--bottom {
+  align-items: flex-end;
+}
+.Grid--center {
+  align-items: center;
+}
+
+/* Alignment per cell */
+.Grid-cell--top {
+  align-self: flex-start;
+}
+.Grid-cell--bottom {
+  align-self: flex-end;
+}
+.Grid-cell--center {
+  align-self: center;
+}
+
+// Menu
+.navigation {
+  list-style: none;
+  /*background: deepskyblue;*/
+  background: $demoHolly;
+  margin: 0 0 1em;
+  border: 1px solid $demoBorder;
+  border-radius: 3px;
+
+  display: flex;
+
+  -webkit-flex-flow: row wrap;
+  justify-content: flex-end;
+    a {
+      text-decoration: none;
+      display: block;
+      padding: 1em;
+      color: #333;
+      &:hover {
+        background: darken($demoHolly, 10%);
+        border-radius:3px;
+      }
+    }
+  &:hover {
+    background: $demoHollyDark;
+  }
+}
+
+
+
+
+
+/*===========================================*/
+/* Base classes for all media - Mobile first */
+.Grid--cols-2 > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid--cols-3 > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid--cols-4 > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.Grid--cols-6 > .Grid-cell {
+  flex: 0 0 calc(50% - #{$gutter});
+}
+
+.Grid--cols-12 > .Grid-cell {
+  flex: 0 0 calc(33.3333% - #{$gutter});
+}
+
+.Grid--holly-grail {
+  .aside, .main {
+    flex: 1 100%;
+  }
+}
+
+/* One of -- columns*/
+.Grid--1of2 > .Grid-cell,
+.Grid--1of4 > .Grid-cell:first-of-type,
+.Grid--1of3 > .Grid-cell:first-of-type{
+  flex: 0 0 100%;
+}
+.Grid--1of6 > .Grid-cell:first-of-type {
+  flex: 0 0 50%;
+}
+
+.Grid--fit > .Grid-cell {
+  flex: 1;
+}
+.Grid--full > .Grid-cell {
+  flex: 0 0 100%;
+}
+
+.container1 {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+.imges {
+  display: block;
+  height: 300px;
+  max-width: 100%;
+  width:100%;
+}
+ .center {
+                text-align: center;
+                width: 100%;
+            }
+.float{
+	position:fixed;
+	margin-bottom:5%;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+.my-float{
+	margin-top:16px;
+}* {
+  box-sizing: border-box;
+}
+
+.column {
+
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.section1{
+  position:relative;
+
+
+  padding:10px 0px;
+
+}
+.section1 h2{
+  text-align:center;
+  font-size:40px;
+}
+.section1 p{
+  text-align:center;
+  padding:0px 70px;
+  color:grey;
+}
+.sticky-social{
+  position:fixed;
+  top:200px;
+  left:-5px;
+  padding:0px;
+  margin:0px;
+}
+.social{
+  list-style:none;
+}
+.social li{
+  padding:10px 10px;
+  font-size:25px;
+  transition:all 0.8s ease-in-out;
+}
+.social li:hover{
+    margin-right:-30px;
+ box-shadow:2px 5px 10px grey;
+}
+.social li:hover .fa{
+    margin-left:20px;
+
+}
+.fa{
+  color:#fff;
+  transition:all 0.8s ease-in-out;
+}
+.fb{
+  background-color:#3C5A98;
+}
+.twitter{
+    background-color:#1EA1F2;
+}
+.insta{
+    background-color:#DC4F42;
+}
+.pin{
+    background-color:#CB2128;
+}
+.vim{
+    background-color:#59BFBE;
+}.wp-button{
+	margin-top: 0;
+}
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:30px;
+	text-align:center;
+  font-size:35px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+
+
+
+
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+ .navbar-brand {
+    width: 80px;
+
+}.col-text {
+  height:20em;
+}
+.grid-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  flex-direction: row;
+  -webkit-flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+}
+.col {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.col-left {
+  -webkit-box-ordinal-group:-1;
+  -webkit-order: -1;
+  -ms-flex-order: -1;
+  order: -1;
+}
+.col-text{
+  display: flex;
+  justify-content: center;
+}
+.Aligner-item {
+  width: 60%;
+}
+.col-image {
+  background-size: cover;
+  background-position:center center;
+}
+
+
+
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.instagram-bg{
+  background: #3f729b	;
+
+}
+.youtube-bg{
+  background: #DD4B39;
+}
+.linkedin-bg{
+  background:#0e76a8;
+}
+.google-bg{
+  background: #DD4B39;
+}@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif !important;
+}
+.nb-form {
+    position: fixed;
+    z-index: 9999;
+    width: 300px;
+    background: #FFF;
+    right: 20px;
+    bottom: -367px;
+    transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+    border-radius: 10px 10px 0 0;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.nb-form:hover {
+    bottom: 0px;
+}
+
+/*-- User Icon --*/
+
+.nb-form .user-icon {
+    position: absolute;
+    top: -49px;
+    right: 12px;
+    display: block;
+    width: 58px;
+    margin: 20px auto 15px;
+    border-radius: 100%;
+}
+
+/*-- Title --*/
+
+.nb-form .title {
+    background: #03a9f4;
+    font-size: 16px !important;
+    padding: 20px 18px !important;
+    color: #fff !important;
+    border-radius: 10px 10px 0 0;
+}
+
+/*-- Text --*/
+
+.nb-form p {
+    font-size: 13px;
+    margin: 0;
+    padding: 15px;
+    color: #666;
+}
+
+.nb-form p.message {
+    margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+
+.nb-form form {
+    padding: 0 15px 15px 15px;
+}
+
+.nb-form input,
+.nb-form textarea {
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 12px;
+    width: 254px;
+    max-width: 254px;
+    margin-bottom: 10px;
+    margin-left: 7px;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    color: #999;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.nb-form input:focus,
+.nb-form textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.nb-form input[type='submit'] {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .4s ease;
+    color: #fff !important;
+    border: none;
+}
+
+.nb-form input[type='submit']:hover {
+    box-shadow: 0 3px 3px 0 rgba(0,0,0,0.07),0 1px 7px 0 rgba(0,0,0,0.02),0 3px 1px -1px rgba(0,0,0,0.1);
+}
+
+.nb-form textarea {
+    min-height: 110px;
+}
+
+
+.nb-form ::-webkit-input-placeholder {
+    color: #ccb0b0;
+}
+
+.nb-form ::-moz-placeholder{
+    color: #ccb0b0;
+}
+
+.nb-form :-ms-input-placeholder {
+    color: #ccb0b0;
+}
+
+.nb-form :-moz-placeholder {
+    color: #ccb0b0;
+}
+
+.nb-form input[type='submit'] {
+    background: #03a9f4;
+}
+
+
+/* Responsive Part */
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 100px) {
+  .column {
+    width: 70px;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px){
+.wp-button{
+	margin-top: 0px;
+}
+}
+
+@media (min-width: 768px){
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1  {
+    width: 100%;
+    *width: 100%;
+  }
+  .wp-button{
+	margin-top: 15px;
+}
+}
+
+@media (min-width: 992px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+  }
+   .dropdown-item{
+       text-align: left;
+ }
+}
+
+/**
+ *  The following is not really needed in this case
+ *  Only to demonstrate the usage of @media for large screens
+ */
+@media (min-width: 1200px) {
+  .seven-cols .col-md-1,
+  .seven-cols .col-sm-1,
+  .seven-cols .col-lg-1 {
+      width: 100%;
+      }
+   .dropdown-item{
+       text-align: left;
+ }
+}
+
+/* Tablet (medium) screens */
+@media (min-width: 30em) {
+  .Grid--cols-4 > .Grid-cell {
+    flex: 0 0 calc(50% - #{$gutter});
+  }
+  .Grid--cols-6 > .Grid-cell {
+    flex: 0 0 calc(33.3333% - #{$gutter});
+  }
+  .Grid--cols-12 > .Grid-cell {
+    flex: 0 0 calc(16.6666% - #{$gutter});
+  }
+  .Grid--holly-grail {
+    .aside {
+      flex: 1 calc(25% - #{$gutter});
+    }
+  }
+  .Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    flex: 0 0 30%;
+  }
+  .Grid--1of4 > .Grid-cell:first-of-type {
+    flex: 0 0 50%;
+  }
+  .Grid--1of3 > .Grid-cell:first-of-type {
+    flex: 0 0 100%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 48em) {
+  .Grid--cols-2 > .Grid-cell,
+  .Grid--cols-3 > .Grid-cell,
+  .Grid--cols-4 > .Grid-cell,
+  .Grid--cols-6 > .Grid-cell,
+  .Grid--cols-12 > .Grid-cell{
+    flex: 1;
+  }
+  .Grid--holly-grail {
+    .main    { flex: 2; }
+    .aside   { flex: 1; }
+    .aside-1 { order: 1; }
+    .main    { order: 2; }
+    .aside-2 { order: 3; }
+  }
+  .Grid--1of2 > .Grid-cell {
+    flex: 0 0 50%;
+  }
+  .Grid--1of6 > .Grid-cell:first-of-type {
+    flex: 0 0 16.6666%;
+  }
+  .Grid--1of4 > .Grid-cell:first-of-type {
+    flex: 0 0 25%;
+  }
+  .Grid--1of3 > .Grid-cell:first-of-type {
+    flex: 0 0 30%;
+  }
+  .Grid--gutters.Grid--nested {
+    .Grid-cell:first-of-type {
+      .Demo {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .navigation {
+      width: 100%;
+    justify-content: space-around;
+  }
+}
+@media all and (max-width: 1000px) {
+  .counter{
+      width: 120%;
+    height: 100%;
+    margin-left: -12px;
+    font-family: monospace;
+  }
+}
+@media all and (max-width: 600px) {
+  .navigation {
+    -webkit-flex-flow: column wrap;
+    flex-flow: column wrap;
+    width: 100%;
+    padding: 0;
+
+    }
+    a {
+      text-align: center;
+      padding: 10px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      border-bottom: 1px solid rgba(0,0,0,0.1);
+    }
+    li:last-of-type a {
+      border-bottom: none;
+    }
+    .counter{
+      margin-bottom:20px;
+      height:90%;
+  }
+
+  }
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+@media (max-width: 640px) {
+  .grid-flex {
+    height: 40em;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+   }
+  .col {
+    order:vertical;
+  }
+  .col-left {
+    -webkit-box-ordinal-group:0;
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+  }
+  .col-text div p {
+    padding: 1em;
+  }
+  .Aligner-item {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 676px) {
+    .nb-form:hover .user-icon {
+        display: none;
+    }
+
+    .nb-form .message {
+        display: none;
+    }
+
+    .nb-form form {
+        padding-top: 15px;
+    }
+    .nb-form{
+        right: 50%;
+        bottom: -320px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+.carousel-indicators1 {
+    right: 0;
+    bottom: -30px;
+
+	li {
+		// background-color: red;
+		outline: 1px solid lightgray;
+	}
+
+	.active {
+		// background-color: blue;
+		outline: 1px solid black;
+	}
+}
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+figure.snip1192 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 10px 1%;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+figure.snip1192 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+figure.snip1192 img {
+  max-width: 100%;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: inline-block;
+  z-index: 1;
+  position: relative;
+}
+figure.snip1192 blockquote {
+  margin: 0;
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 30px 50px 65px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0 0 -50px;
+  line-height: 1.6em;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+figure.snip1192 blockquote:before,
+figure.snip1192 blockquote:after {
+  font-family: 'FontAwesome';
+  content: "\201C";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+figure.snip1192 blockquote:before {
+  top: 35px;
+  left: 20px;
+}
+figure.snip1192 blockquote:after {
+  content: "\201D";
+  right: 20px;
+  bottom: 35px;
+}
+figure.snip1192 .author {
+  margin: 0;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+}
+figure.snip1192 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+figure.snip1192 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  display: block;
+}
+
+
+ .col-md-4
+          {
+          display: inline-block;
+          margin-left:-10px;
+          }
+
+          .carousel-indicators .active {
+          background-color: blue;
+            }
+
+
+
+          body .carousel-indicator li{
+          background-color: blue;
+          }
+
+          body .carousel-indicators{
+          bottom: 0;
+          }
+
+          body .carousel-control-prev-icon,
+          body .carousel-control-next-icon{
+          }
+           body .no-padding{
+           padding-left: 0,
+           padding-right: 0;
+           }
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top "
+     style="background-color: #5E8C88">
+  <a class="navbar-brand mx-left" href="{%url 'index'%}">
+      <img src="{%static 'images/logo1.jpg'%}" style="border-radius:20px;" width=80% ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto" id="menulist" >
+<li class="nav-item active">
+        <a class="nav-link w3-bar-item w3-button" href="{%url 'index'%}" >Home </a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link w3-bar-item w3-button" href="{%url 'about'%}" >About Us</a>
+      </li>
+           <li class="nav-item active">
+        <a class="nav-link" href="{%url 'show_internship'%}">Internship<span class="sr-only">(current)</span>
+        </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" href="{%url 'job'%}">Jobs<span class="sr-only">(current)</span></a>
+      </li>
+
+
+
+        <li class="nav-item active">
+        <a class="nav-link" href="{%url 'blog_page'%}">Blog
+            <span class="sr-only">(current)</span></a>
+      </li>
+           <li class="nav-item active">
+        <a class="nav-link" href="{%url 'associate'%}">Associate
+            <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+     <ul class="nav navbar-nav mx-right">
+              <div class="dropdown" >
+  <button  style="border-radius:15px;background:#ffdd99;font-style:bold;
+  color: #5E8C88" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <b>Log In</b>
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{%url 'login'%}">User</a>
+    <a class="dropdown-item" href="{%url 'companylogin'%}">Company</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+          </ul>
+  </div>
+</nav>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li style="color:white" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+        <img class="d-block w-100" style="height:550px; filter: sepia(40%) saturate(180%) brightness(80%) hue-rotate(90deg) ;opacity:0.8" src="{%static 'images/o8.jpg'%}"  alt="First slide">
+
+        <div class="carousel-caption d-none d-md-block">
+       <h5 class="animate__animated animate__zoomIn"
+           style="color:white; margin-top:20px; text-shadow: 2px 2px #000;
+           animation-delay:0.5s">
+           JOIN US FOR YOUR PERSONAL
+           GROWTH WITH JOB OPPORTNITIES
+       </h5>
+
+
+  </div>
+  </div>
+    <div class="carousel-item">
+<img class="d-block w-100"  style="height:550px; filter: sepia(40%) saturate(180%) brightness(80%) hue-rotate(90deg) ;opacity:0.8" src="{%static 'images/o9.jpg'%}" alt="First slide">   <div class="carousel-caption d-none d-md-block">
+       <h5 class="animate__animated animate__zoomIn" style="color:white; margin-top:15px ; text-shadow: 2px 2px #000;animation-delay:0.5s">
+A free ride to your dream career       </h5>
+
+
+  </div>
+ </div>
+
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+
+
+</div>
+
+
+<div class="section1">
+    <h3 align="center" style="margin-top:30px; color: #5E8C88;"
+    class="animate__animated animate__slideInDown " >
+    Internships provided by us</h3>
+      <div class="sticky-social">
+
+
+  </div>
+</div>
+
+<div class="wrapper">
+  <h5 class="animate__animated animate__slideInLeft "><b>Our Categories</b></h5><div class="row">
+
+
+
+
+
+  <div class="Grid Grid--gutters Grid--cols-6 u-textCenter">
+
+    <div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/ux.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_design'%}" style="height:48px;color:#f7c06e">Web  Designer</a>
+    </div></div></div>
+   <div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/responsive.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_graphics'%}" style="height:48px;color:#f7c06e">Graphics Designer</a>
+    </div></div></div><div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/digital-marketing.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_market'%}" style="height:48px;color:#f7c06e"> Digital Marketing</a>
+    </div></div></div><div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/website.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_software'%}" style="height:48px;color:#f7c06e" >Software Development</a>
+    </div></div></div><div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/monitoring.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_java'%}" style="height:48px;color:#f7c06e">Java</a>
+    </div></div></div><div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/programming.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_python'%}" style="height:48px;color:#f7c06e">Python</a>
+    </div></div></div><div class="Grid-cell"><div class="Demo content-1of6">
+        <div class="card" style="width:140px" >
+            <img src="{%static 'images/website.png'%}" style="height:70px;width:80px;margin:auto" >
+
+            <a href="{%url 'job_cother'%}" style="height:48px;color:#f7c06e">Other</a>
+    </div></div></div>
+  </div>
+
+  </div>
+  </div>
+  </div>
+
+
+  <hr />
+
+
+
+
+
+
+<br/>
+
+
+<div class="container-fluid" style="background:#ffdd99">
+    <div class="row">
+        <div class="col-md-8"><h1 align="center" class="large-font"
+                                  style="color:#5E8C88">
+              <b>Three small steps between<br/>
+                  you and your next great <br/>hire</b></h1>
+          <p align="center"><span style="font-size:26px;color:white;text-align:center">
+</span><br/>
+      <a style="color:#5E8C88" href="{%url 'companylogin'%}"><button type="button" style="margin-bottom:10px;width:220px;border-radius:20px;color:#5E8C88;background:white" class="btn btn-dark">POST JOB</button>
+&nbsp;
+      </a></div>
+        <div class="col-md-4">
+            <img src="{%static 'images/laptops.jpg'%}">
+        </div>
+    </div>
+
+
+</div>
+<br/>
+<section class="service-categories text-xs-center" style="margin-top:20px">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+
+          <div class="card service-card card-inverse">
+            <div class="card-block">
+                <a style="color:black" href="{%url 'login'%}"> <span style="color:black"  class="fa fa-user center fa-3x"></span></a>
+                <a href="{%url 'login'%}"><h4 align="center" class="card-title"> Create your Free Account</h4></a>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4">
+
+          <div class="card service-card card-inverse">
+            <div class="card-block">
+                <a style="color:black" href="{%url 'companylogin'%}"> <span style="color:black" class="fa fa-edit center fa-3x"></span></a>
+                <a style="color:black" href="{%url 'companylogin'%}"> <h4 align="center" class="card-title">Build Your Job Post</h4></a>
+            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4">
+
+          <div class="card service-card card-inverse">
+            <div class="card-block">
+                <a style="color:black" href="{%url 'companylogin'%}"><span style="color:black" class="fa fa-copy center  fa-3x"></span></a>
+                <a style="color:black" href="{%url 'companylogin'%}"><h4 align="center" class="card-title">Post Your Job</h4></a>
+            </div>
+          </div>
+
+      </div>
+
+
+  </div>
+  </div>
+</section>
+<br/>
+                  <h3  align="center" class="sub-titlehny animate__animated animate__fadeInLeft">About Our Company</h3>
+
+<section class="w3l-grids-3 py-5" id="about" style="background:#ffdd99">
+    <div class="container " >
+
+      <div class="row ">
+
+        <div class="col-lg-6 bottom-ab-left">
+
+            <iframe width="100%" height="300px"
+src="https://www.youtube.com/embed/A9FgvXeKetA?autoplay=1&mute=1&loop=1&playlist=A9FgvXeKetA">
+</iframe>
+</p>
+        </div>
+
+        <div class="col-lg-6 bottom-ab-right ">
+          <p class="divstyle  animate__animated animate__slideInRight" style="color:#5E8C88;"><b>The company was established in the year 2019, with the goal to provide high quality cost effective services to the businesses. We desire to grow on every day to become the most trusted partner for our clients delivering service. Today we have a team of of experienced and skillfull team of professional’s software engineers, technology enthusiasts with creative designers.
+            Within a short time span, we have
+              successfully delivered over 50+ projects to clients worldwide.eSparse Matrix Solutions Private Limited is a software company that includes Enterprise Software development, Website designing and development, Mobile application development, Digital marketing.</b>
+
+
+</p>
+            <p align="center"><span style="font-size:26px;color:white;text-align:center">
+</span><br/>
+      <a style="color:#5E8C88" href="{%url 'about'%}"><button type="button" style="margin-bottom:10px;width:220px;border-radius:20px;background:#5E8C88;color:white" class="btn btn-dark">Read More</button>
+&nbsp;
+      </a>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+  <!--//grids-->
+  <!--/w3l-faq-block-->
+  <!--//w3l-faq-block-->
+<div class="x" >
+          <h1 class=" animate__animated animate__slideInUp" align="center"  style="color:black">
+              <b >Save time and effort in your
+                  hiring journey.</b></h1>
+
+
+
+</div>
+<section class="service-categories text-xs-center">
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4" >
+
+          <div class="card service-card card-inverse">
+            <div class="card-block" style="background:#ffdd99">
+<a class="event" href="#">
+    <img class="imges" src="{%static 'images/p1.jpg'%}" style="width:100%" alt="description"/>
+
+    <div class="content">
+      <h3 style="background:#5E8C88;color:#ffdd99">LEARN</h3>
+
+        <div class="rollover">
+            <p>
+                Start Learning with us and improve your skills</p>        </div>
+    </div>
+</a>            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4">
+
+          <div class="card service-card card-inverse">
+            <div class="card-block">
+<a class="event" href="#">
+    <img class="imges" src="{%static 'images/p2.jpg'%}" style="width:100%" alt="description"/>
+
+    <div class="content">
+      <h3 style="background:#5E8C88;color:#ffdd99">INTERNSHIP</h3>
+
+        <div class="rollover">
+     <p>
+                Post your resume and get the best internship according to your skills.</p>    </div>
+    </div>
+</a>            </div>
+          </div>
+
+      </div>
+      <div class="col-md-4">
+
+          <div class="card service-card card-inverse">
+            <div class="card-block">
+<a class="event" href="#">
+    <img class="imges" style="text-align:center" src="{%static 'images/p3.jpg'%}" style="width:100%" alt="description"/>
+
+    <div class="content">
+        <h3 style="background:#5E8C88;color:#ffdd99">WORK</h3>
+        <div class="rollover">
+<p>Become a good and expericenced emplyoee</p>    </div>
+        </div>
+    </div>
+</a>            </div>
+          </div>
+
+      </div>
+
+
+  </div>
+  </div>
+</section><br/>
+<!--<h4 align="center" class=" animate__animated animate__slideInUp">TESTIMONIAL</h4>-->
+<!--            <h3  align="center" class=" animate__animated animate__fadeInLeft">What Our <span style="color: #9b5de5">Clients</span> Say?</h3>-->
+
+    <section class="testimonial text-center">
+ <div class="heading white-heading">
+                Testimonial
+            </div>
+<div id="demo" class="carousel slide my-3" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+
+       {% for i in range %}
+      <li data-target="#demo" data-slide-to="{{i}}" ></li>
+      {% endfor %}
+    </ul>
+
+    <!--Slideshow starts here -->
+    <div class="container carousel-inner no-padding">
+
+      <div class="carousel-item active">
+        <div class="col-md-4" >
+            <figure class="snip1192" >
+  <blockquote class="divstyle" style="border-radius:15px;background:#ffdd99;font-style:bold;
+  color: #5E8C88">
+      <b>{{review.0.review}}</b></blockquote>  <div class="author">
+    <img src="{{review.0.uploads.url}}" alt="sq-sample1"/>
+    <h5>{{review.0.user_name}} <span> {{review.0.location}}</span></h5>
+  </div>
+</figure>
+
+       </div>
+
+
+        {% for i in review|slice:"1:"%}
+          <div class="col-md-4">
+           <figure class="snip1192">
+  <blockquote class="divstyle" style="border-radius:15px;background:#ffdd99;
+  color: #5E8C88">
+      <b>{{i.review}}</b></blockquote>  <div class="author">
+    <img src="{{i.uploads.url}}" alt="sq-sample1"/>
+    <h5>{{i.user_name}} <span> {{i.location}}</span></h5>
+  </div>
+</figure>
+        </div>
+        {% if forloop.counter|divisibleby:2 and forloop.counter > 0 and not forloop.last %}
+      </div>
+        <div class="carousel-item">
+        {% endif %}
+
+        {% endfor %}
+    </div>
+
+
+
+</div>
+</div>
+    <!-- left and right controls for the slide -->
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+    </a>
+
+    </section>
+<br/><br/>
+<div class="container" style="margin-top:30px">
+	<div class="row">
+
+	</div>
+		<div class="row text-center" >
+	        <div class="col" >
+	        <div class="counter" style="background:#ffdd99">
+      <i style="color:#5E8C88" class="fa fa-user fa-2x"></i>
+      <h3 style="color:#5E8C88" class="timer count-title count-number" data-to="100" data-speed="1500"></h3>
+       <p style="color:#5E8C88;font-size:20px" class="count-text ">Internship Completed</p>
+    </div>
+	        </div>
+              <div class="col">
+               <div class="counter" style="background:#ffdd99">
+      <i style="color:#5E8C88" class="fa fa-edit fa-2x"></i>
+      <h3 style="color:#5E8C88" class="timer count-title count-number" data-to="100" data-speed="1500"></h3>
+      <p style="color:#5E8C88;font-size:20px" class="count-text ">Courses Completed</p>
+    </div>
+              </div>
+              <div class="col">
+                  <div class="counter" style="background:#ffdd99">
+      <i style="color:#5E8C88" class="fa fa-trophy fa-2x"></i>
+      <h3 style="color:#5E8C88" class="timer count-title count-number" data-to="50" data-speed="1500"></h3>
+      <p style="color:#5E8C88;font-size:20px" class="count-text ">Job Provided</p>
+    </div></div>
+              <div class="col">
+              <div class="counter" style="background:#ffdd99">
+      <i style="color:#5E8C88" class="fa fa-building fa-2x"></i>
+      <h3 style="color:#5E8C88"  class="timer count-title count-number" data-to="2" data-speed="1500"></h3>
+      <p style="color:#5E8C88;font-size:20px" class="count-text ">Years In Operation</p>
+    </div>
+              </div>
+         </div>
+</div>
+    <!-- End Testimonial Slider Section -->
+<br/>
+<br/>
+
+<a href="https://api.whatsapp.com/send?phone=+918459694113&text=ContactUs" class="float" target="_blank">
+    <i class="fa fa-whatsapp wp-button"></i>
+</a>
+<footer class="footer-section"  style="background-color:#5E8C88">
+        <div class="container">
+
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ffdd99">Category</h3>
+                            </div>
+<div class="footer-text">
+                                <p align="justify">
+                                    <i style="color:#ffdd99" class=" fa fa-laptop 2px"></i>
+                                    <a style="color:white"  href="{%url 'job_software'%}">Software Development</a>
+                                </p>
+    <p align="justify">
+                                    <i style="color:#ffdd99" class=" fa fa-laptop 2px"></i>
+        <a style="color:white"  href="{%url 'job_web'%}">Web Developer</a>
+                                </p>
+    <p align="justify">
+                                    <i style="color:#ffdd99" class=" fa fa-laptop 2px"></i>
+        <a style="color:white"  href="{%url 'job_graphics'%}">Graphic Designer</a>
+                                </p>
+    <p align="justify">
+                                    <i style="color:#ffdd99" class=" fa fa-laptop 2px"></i>
+        <a style="color:white"  href="{%url 'job_market'%}">Digital Marketing</a>
+                                </p>
+    <p align="justify">
+                                    <i style="color:#ffdd99" class=" fa fa-laptop 2px"></i>
+        <a style="color:white"  href="{%url 'job_python'%}">Python</a>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ffdd99">Locations</h3>
+                            </div>
+<div class="footer-text">
+                                <p align="justify">
+    <i style="color:#ffdd99" class=" fa fa-map-marker  2px"></i>
+                                    <a style="color:white" href="{%url 'job_delhi'%}"> Delhi</a>
+                                </p>
+    <p align="justify">
+    <i style="color:#ffdd99" class=" fa fa-map-marker  2px"></i>
+        <a style="color:white"  href="{%url 'job_mumbai'%}">Mumbai</a>
+                                </p>
+    <p align="justify">
+    <i style="color:#ffdd99" class=" fa fa-map-marker  2px"></i>
+        <a style="color:white"  href="{%url 'job_chennai'%}">Chennai</a>
+                                </p>
+    <p align="justify">
+    <i style="color:#ffdd99" class=" fa fa-map-marker  2px"></i>
+        <a style="color:white"  href="{%url 'job_pune'%}">Pune</a>
+                                </p>
+    <p align="justify">
+    <i style="color:#ffdd99" class=" fa fa-map-marker  2px"></i>
+        <a style="color:white"  href="{%url 'job_bangalore'%}">Bangalore</a>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ffdd99">Follow Us</h3>
+                            </div>
+<div class="footer-text">
+ <div class="footer-social-icon">
+                                <a style="margin-top:2px" href="https://www.facebook.com/esparsematrixsolutions/"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                             <br/>   <a style="margin-top:2px" href="https://twitter.com/MatrixSparse"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <br/>    <a style="margin-top:2px" href="https://www.linkedin.com/company/sparse-matrix-solutions"><i class="fab fa-linkedin linkedin-bg"></i></a>
+                                                     <br/>
+     <a href="https://www.instagram.com/esparse_matrix_solutions/" style="margin-top:2px"><i class="fab fa-instagram instagram-bg"></i></a>
+                            <br/>    <a style="margin-top:2px" href="https://www.youtube.com/channel/UCmmkB3zOe1d7g6FvXqtGcQw"><i class="fab fa-youtube youtube-bg"></i></a>
+   </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ffdd99">Address</h3>
+                            </div>
+<div class="footer-text">
+                                <p style="color:white" align="justify"><i  style="color:#ffdd99" class="fas fa-map-marker-alt"></i>   133/1, Spectrum Building,
+                                    <br/>Gurudwara Colony, Akurdi, Pune-411033
+                                </p>
+                            </div>
+
+<div class="footer-text">
+                                <p style="color:white" align="justify"><i  style="color:#ffdd99" class="fas fa-phone"></i>
+
+                                  (+91) 8459694113</p>
+<p style="color:white" align="justify"><i class="fas fa-envelope"  style="color:#ffdd99"></i>
+                                  sparsematrix195@gmail.com</p>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 col-lg-6 mx-left">
+                        <div class="copyright-text">
+                            <p style="color:#ffdd99" align="center" >Copyright &copy;  <a style="color:#ffdd99" href="https://sparsematrix.co.in/"> eSparse Matrix Solutions Pvt Ltd.  </a> All Rights Reserved. 2021</p>
+                        </div>
+                    </div>
+
+
+                    </div>
+                    </div>
+                </div>
+
+    </footer>
+
+<script>
+    (function ($) {
+	$.fn.countTo = function (options) {
+		options = options || {};
+
+		return $(this).each(function () {
+			// set options for current element
+			var settings = $.extend({}, $.fn.countTo.defaults, {
+				from:            $(this).data('from'),
+				to:              $(this).data('to'),
+				speed:           $(this).data('speed'),
+				refreshInterval: $(this).data('refresh-interval'),
+				decimals:        $(this).data('decimals')
+			}, options);
+
+			// how many times to update the value, and how much to increment the value on each update
+			var loops = Math.ceil(settings.speed / settings.refreshInterval),
+				increment = (settings.to - settings.from) / loops;
+
+			// references & variables that will change with each update
+			var self = this,
+				$self = $(this),
+				loopCount = 0,
+				value = settings.from,
+				data = $self.data('countTo') || {};
+
+			$self.data('countTo', data);
+
+			// if an existing interval can be found, clear it first
+			if (data.interval) {
+				clearInterval(data.interval);
+			}
+			data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+			// initialize the element with the starting value
+			render(value);
+
+			function updateTimer() {
+				value += increment;
+				loopCount++;
+
+				render(value);
+
+				if (typeof(settings.onUpdate) == 'function') {
+					settings.onUpdate.call(self, value);
+				}
+
+				if (loopCount >= loops) {
+					// remove the interval
+					$self.removeData('countTo');
+					clearInterval(data.interval);
+					value = settings.to;
+
+					if (typeof(settings.onComplete) == 'function') {
+						settings.onComplete.call(self, value);
+					}
+				}
+			}
+
+			function render(value) {
+				var formattedValue = settings.formatter.call(self, value, settings);
+				$self.html(formattedValue);
+			}
+		});
+	};
+
+	$.fn.countTo.defaults = {
+		from: 0,               // the number the element should start at
+		to: 0,                 // the number the element should end at
+		speed: 1000,           // how long it should take to count between the target numbers
+		refreshInterval: 100,  // how often the element should be updated
+		decimals: 0,           // the number of decimal places to show
+		formatter: formatter,  // handler for formatting the value before rendering
+		onUpdate: null,        // callback method for every time the element is updated
+		onComplete: null       // callback method for when the element finishes updating
+	};
+
+	function formatter(value, settings) {
+		return value.toFixed(settings.decimals);
+	}
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+	formatter: function (value, options) {
+	  return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+	}
+  });
+
+  // start all the timers
+  $('.timer').each(count);
+
+  function count(options) {
+	var $this = $(this);
+	options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+	$this.countTo(options);
+  }
+});
+</script>
+<script>$('.carousel.carousel-multi .carousel-item').each(function () {
+	var next = $(this).next();
+	if (!next.length) {
+		next = $(this).siblings(':first');
+	}
+	next.children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+
+	if (next.next().length > 0) {
+		next.next().children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+	}
+	else {
+		$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+	}
+});</script>
+<script>
+    $(document).ready(function(){
+  $(".testimonial .indicators li").click(function(){
+    var i = $(this).index();
+    var targetElement = $(".testimonial .tabs li");
+    targetElement.eq(i).addClass('active');
+    targetElement.not(targetElement[i]).removeClass('active');
+            });
+            $(".testimonial .tabs li").click(function(){
+                var targetElement = $(".testimonial .tabs li");
+                targetElement.addClass('active');
+                targetElement.not($(this)).removeClass('active');
+            });
+        });
+$(document).ready(function(){
+    $(".slider .swiper-pagination span").each(function(i){
+        $(this).text(i+1).prepend("0");
+    });
+});
+</script>
+
+</body>
+</html>

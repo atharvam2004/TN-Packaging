@@ -1,0 +1,53 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Add Blogs
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+
+
+
+    <div class="form-style-3" >
+<form method="POST" enctype="multipart/form-data">
+{% if messages %}
+  <div id='hideMe'>>
+    {% for message in messages %}
+
+    <p class="p-2 mb-2 bg-success text-white hideMe" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+  </div>
+              {% endif %}
+{% csrf_token %}
+<fieldset style="background:white;" ><legend style="color:white;
+  background: #FF4433;">POST YOUR BLOGS</legend>
+    <label ><span>Company Name <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" name="company_name" required /></label>
+
+    <label ><span>Email <span class="required">*</span></span><input type="email" style="border-radius:30px " placeholder="Use Same Email Address That You Used  During Signup" class="input-field" name="email_address" required /></label>
+<label ><span>Location <span class="required">*</span></span><input type="text" style="border-radius:30px " class="input-field" name="location" required  /></label>
+
+<label ><span>Title <span class="required">*</span></span><input type="text" style="border-radius:30px " class="input-field" name="title" required  /></label>
+<label ><span>SubTitle <span class="required">*</span></span><input type="text"  class="input-field" name="sub_title"  required /></label>
+
+  <label ><span>Description <span class="required">*</span></span><textarea style="border-radius:30px " name="description" required class="textarea-field"></textarea></label>
+<label for="myfile" style="color:#FF4433;">Image</label>
+
+               <input  type="file" id="myfile" name="uploads" required style="border-radius:10px " placeholder="Upload Your Logo"><br>
+<label style="text-align:center"><span> </span><input style="border-radius:30px;color:white;background: #FF4433;"type="submit" value="Submit" /></label>
+</fieldset>
+</form>
+</div>
+</div>
+
+
+  <!-- //script for testimonials -->
+
+    </div>
+</div>
+
+{%endblock%}

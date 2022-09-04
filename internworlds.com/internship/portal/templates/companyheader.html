@@ -1,0 +1,1308 @@
+<!doctype html>
+{%load static%}
+<html lang="en">
+<head>
+    <title>
+    {% block title %}
+
+    {% endblock %}</title>
+    <meta name="title" content="Internship | Internships in Pune – InternWorlds">
+<meta name="description" content="InternWorlds is an online portal that provides the best internship opportunities in India. Such as Summer Internships, Virtual Internships, Paid Internships, and many more.">
+<meta name="keywords" content="Internship, Internships, Internship in India, summer internship, paid internship, Digital Marketing Course in India,  virtual Internships, MBA Internships, Office Internships, Internship in pune, Internship in Mumbai, Learn Digital Marketing Course in India, Online Courses, Internship Opportunities in India">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content=" eSparse Matrix Solutions Pvt. Ltd.">
+    
+  <!-- Required meta tags -->
+ <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no", initial-scale=1, shrink-to-fit=no">
+
+    <title>Interns Port@l</title>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+      <script src=
+"https://kit.fontawesome.com/a6e2755b4d.js"
+                crossorigin="anonymous">
+        </script><link rel="stylesheet" href="{%static 'css/style-starter.css'%}">
+<style>
+body {
+
+  font-family: 'Work Sans', sans-serif;
+  margin: 0;
+  background-color: #eee;
+}
+
+/* Layout */
+
+#container {
+  padding: 0;
+  margin: 0;
+  background-color: #fff;
+}
+
+#main {
+  padding: 4% 1.5em;
+  max-width: 55em;
+  margin: 0 auto;
+}
+
+#header {
+  padding: 1.5em;
+  margin: 0 0 1em 0;
+  background-color: #eee;
+}
+
+#footer {
+  padding: 1.5em;
+  margin: 2em 0 0 0;
+  background-color:black;
+
+}
+
+
+/* Menu Styles */
+
+.primary-nav {
+	position: fixed;
+	z-index: 999;
+
+}
+
+.menu {
+	position: relative;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+}
+
+.open-panel {
+  border: none;
+  background-color:#fff;
+  padding: 0;
+}
+
+.hamburger {
+	background: #fff;
+	position: relative;
+	display: block;
+	text-align: center;
+	padding: 13px 0;
+	width: 50px;
+  height: 73px;
+	left: 0;
+  top: 0;
+	z-index: 1000;
+  cursor: pointer;
+}
+
+.hamburger:before {
+	content:"\2630"; /* hamburger icon */
+	display: block;
+  color: #000;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.openNav .hamburger:before {
+	content:"\2715"; /* close icon */
+	display: block;
+  color: #000;
+  line-height: 32px;
+  font-size: 16px;
+}
+
+.hamburger:hover:before {
+  color: #777;
+}
+
+.primary-nav .menu li {
+	position: relative;
+}
+
+.menu .icon {
+	position: absolute;
+	top: 12px;
+	right: 10px;
+	pointer-events: none;
+  width: 24px;
+  height: 24px;
+}
+
+.menu,
+.menu a,
+.menu a:visited {
+  color: white;
+  text-decoration: none!important;
+	position: relative;
+}
+
+.menu a {
+  display: block;
+  white-space: nowrap;
+  padding: 1em;
+  font-size: 14px;
+  color:white;
+}
+.menu a:hover {
+	color: #000000;
+	background:white;
+}
+
+.menu {
+	margin-bottom: 3em;
+}
+
+.menu-dropdown li .icon {
+	color: #777;
+}
+
+.menu-dropdown li:hover .icon {
+	color: #fff;
+}
+.menu-dropdown li a:hover {
+	color: #000000;
+}
+
+.menu label {
+  margin-bottom: 0;
+  display: block;
+}
+
+.menu label:hover {
+  cursor: pointer;
+}
+
+.menu input[type="checkbox"] {
+  display: none;
+}
+
+input#menu[type="checkbox"] {
+  display: none;
+}
+
+
+
+
+
+
+.sub-menu-dropdown {
+	display: none;
+}
+
+.new-wrapper {
+    font-size:1.5em;
+	position: absolute;
+	left: 50px;
+  width: calc(100% - 50px);
+  transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#menu:checked + ul.menu-dropdown {
+
+		left: 0;
+    -webkit-animation: all .45s cubic-bezier(0.77, 0, 0.175, 1);
+            animation: all .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.sub-menu-checkbox:checked + ul.sub-menu-dropdown {
+    display: block!important;
+    -webkit-animation: grow .45s cubic-bezier(0.77, 0, 0.175, 1);
+            animation: grow .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+.openNav .new-wrapper {
+  position: absolute;
+  transform: translate3d(200px, 0, 0);
+  width: calc(100% - 250px);
+  transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+
+.downarrow {
+  background: transparent;
+	position: absolute;
+	right: 50px;
+	top: 12px;
+  color: #777;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  display: block;
+}
+
+.downarrow:hover {
+  color: #fff;
+}
+
+.menu {
+	position: absolute;
+	display: block;
+	left: -200px;
+  top: 0;
+	width: 250px;
+  transition: all 0.45s cubic-bezier(0.77, 0, 0.175, 1);
+  background-color: #000;
+	z-index: 999;
+}
+
+.menu-dropdown {
+  top: 0;
+  overflow-y: auto;
+}
+
+.overflow-container {
+    font-size:1.5em;
+  position: relative;
+  /*height: calc(100vh - 73px)!important;*/
+  height: calc(100vh)!important;
+  overflow-y: auto;
+  border-top: 73px solid #fff;
+  z-index: -1;
+  display:block;
+}
+
+.menu a.logotype {
+  position: absolute!important;
+  top: 11px;
+  left: 37px;
+  display: block;
+  font-family: 'Work Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #000;
+  font-size: 21px;
+  padding: 10px;
+}
+
+.menu a.logotype span {
+  font-weight: 400;
+}
+
+.menu a.logotype:hover {
+  color: #FF4433;
+}
+
+.sub-menu-dropdown {
+	background-color:#FF4433;
+}
+
+.menu:hover {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.openNav .menu:hover {
+	position: absolute;
+	left: -200px;
+	top 73px;
+}
+
+.openNav .menu {
+  top 73px;
+		transform: translate3d(200px, 0, 0);
+    transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+	/* label.hamburger {
+		display: none;
+	} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* look and feel only, not needed for core menu*/
+
+@-webkit-keyframes grow {
+
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+@keyframes grow {
+
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* Text meant only for screen readers. */
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar. */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Resposive Typography */
+
+
+body,
+button,
+input,
+select,
+optgroup,
+textarea {
+	color: #000;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 300;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+  font-weight: 800;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+.light {
+    color:#ddd;
+}
+
+strong {
+	font-weight: 600;
+}
+
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+p.big {
+	font-size: 140%;
+	line-height: 1.3em;
+}
+
+p.small {
+	font-size: 80%;
+	}
+
+blockquote {
+	display:block;
+    margin: 1em 20px;
+    padding: 0 1em;
+    position:relative;
+}
+
+blockquote:before {
+
+}
+
+blockquote cite,
+blockquote em,
+blockquote i {
+	font-style: italic;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+sup,
+sub {
+	height: 0;
+	line-height: 1;
+	vertical-align: baseline;
+	position: relative;
+}
+
+sup {
+	bottom: 1ex;
+}
+
+sub {
+	top: .5ex;
+}
+
+
+p {
+    font-size: 1em;
+    margin: 0 0 2em 0;
+}
+
+article:last-of-type, p:last-of-type {
+	margin-bottom: 0;
+}
+
+p.intro {
+    font-size:1.25em;
+    line-height: 1.5;
+    font-weight:300;
+     margin: 0 0 1.5em 0;
+}
+
+h1, h2 {
+    letter-spacing: -1px;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  margin: 0 0 0.5em 0;
+  line-height: 1.1;
+}
+
+h1, .h1 {font-size: 2.074em;}
+
+h2, .h2 {font-size: 1.728em;}
+
+h3, .h3 {font-size: 1.44em;}
+
+h4, .h4 {font-size: 1.2em;}
+
+
+
+/* Medium Screen Typography - Scale: 1.333 Perfect Fourth (thanks http://type-scale.com/)  */
+
+@media screen and (min-width: 42em) {
+
+	h1, .h1 { letter-spacing: -2px; }
+
+	h1, .h1 {font-size: 3.157em;}
+
+	h2, .h2 {font-size: 2.369em;}
+
+	h3, .h3 {font-size: 1.777em;}
+
+	h4, .h4 {font-size: 1.333em;}
+
+	p { font-size:1.0625em; }
+
+	p.intro { font-size:1.3em; }
+
+}
+
+
+/* Large Screen Typography  - Scale: 1.414 Augmented Fourth (thanks http://type-scale.com/)  */
+
+@media screen and (min-width: 72em) {
+
+	h1 { letter-spacing: -3px; }
+
+	h1, .h1 { margin-bottom: 0.35em; font-size: 3.998em; }
+
+	h2, .h2  { font-size: 2.827em; }
+
+	h3, .h3 { font-size: 1.999em; }
+
+	h4, .h4 { font-size: 1.414em; }
+
+	p { font-size:1.125em; }
+
+	p.intro { font-size:1.4em; }
+
+}
+
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 30%;
+
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height:100%;
+  border-radius:30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.form-style-3{
+
+	max-width: 100%;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.form-style-3 label{
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-3 label > span{
+	float: left;
+	width: 100px;
+	color: #FF4433;;
+	font-weight: bold;
+	font-size: 12px;
+	text-shadow: 1px 1px 1px #fff;
+}
+.form-style-3 fieldset{
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	margin: 0px 0px 10px 0px;
+	border: 1px solid BLACK;
+	padding: 20px;
+
+	box-shadow: inset 0px 0px 15px ;
+	-moz-box-shadow: inset 0px 0px 15px ;
+	-webkit-box-shadow: inset 0px 0px 15px #FFE5E5;
+}
+.form-style-3 fieldset legend{
+
+	color: white;
+	border-top: 1px solid #FFD2D2;
+	border-left: 1px solid #FFD2D2;
+	border-right: 1px solid #FFD2D2;
+	border-radius: 5px 5px 0px 0px;
+	-webkit-border-radius: 5px 5px 0px 0px;
+	-moz-border-radius: 5px 5px 0px 0px;
+	background: black;
+	padding: 0px 8px 3px 8px;
+	box-shadow: -0px -1px 2px #F1F1F1;
+	-moz-box-shadow:-0px -1px 2px #F1F1F1;
+	-webkit-box-shadow:-0px -1px 2px #F1F1F1;
+	font-weight: normal;
+	font-size: 20px;
+	text-align:center
+}
+.form-style-3 textarea{
+	width:250px;
+	height:100px;
+}
+.form-style-3 input[type=text],
+.form-style-3 input[type=number],
+.form-style-3 input[type=search],
+.form-style-3 input[type=time],
+.form-style-3 input[type=url],
+.form-style-3 input[type=email],
+.form-style-3 select,
+.form-style-3 textarea{
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border: 1px solid black;
+	outline: none;
+	color: #black;
+	padding: 5px 8px 5px 8px;
+	box-shadow: inset 1px 1px 4px blakv;
+	-moz-box-shadow: inset 1px 1px 4px #FFD5E7;
+	-webkit-box-shadow: inset 1px 1px 4px #FFD5E7;
+
+	width:70%;
+	margin-left:30px
+}
+.form-style-3  input[type=submit],
+.form-style-3  input[type=button]{
+	background: black;
+	border: 1px solid #C94A81;
+	padding: 5px 15px 5px 15px;
+	color: WHITE;
+	box-shadow: inset -1px -1px 3px #FF62A7;
+	-moz-box-shadow: inset -1px -1px 3px #FF62A7;
+	-webkit-box-shadow: inset -1px -1px 3px #FF62A7;
+	border-radius: 3px;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	font-weight: bold;
+	width:300px
+}
+.required{
+	color:red;
+	font-weight:normal;
+}table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+
+}
+th {
+  background-color: black;
+  color: white;
+}
+td, th {
+  border: 1px solid black;
+  text-align: left;
+  padding: 8px;
+  text-color:black
+}
+table, th, td {
+  border: 1px solid black;
+}
+}* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container1 {
+  padding: 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #04AA6D;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}div.parent{
+
+    display:table;
+    padding:5px;
+    width:100%;
+    margin:5px 0; /* you can change/remove margin */
+}
+div.text{
+    vertical-align:middle;
+    display:table-cell;
+    text-align:justify;
+}
+div.parent .img{
+    vertical-align:middle;
+    display:table-cell;
+    padding-right:5px;
+    width:20%;
+
+}
+div.img img{
+    width:900px;
+    height:400px; /* you can change height */
+    vertical-align:middle;
+}.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}.top {
+  position: fixed;
+  left: 0;
+
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: right;
+
+}/*----  Main Style  ----*/
+#cards_landscape_wrap-2{
+  text-align: center;
+  background: #F7F7F7;
+}
+#cards_landscape_wrap-2 a{
+  text-decoration: none;
+  outline: none;
+}
+#cards_landscape_wrap-2 .card-flyer {
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box{
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.50);
+  border-radius: 5px;
+}
+#cards_landscape_wrap-2 .card-flyer .image-box img{
+  -webkit-transition:all .9s ease;
+  -moz-transition:all .9s ease;
+  -o-transition:all .9s ease;
+  -ms-transition:all .9s ease;
+  width: 100%;
+  height: 200px;
+}
+#cards_landscape_wrap-2 .card-flyer:hover .image-box img{
+  opacity: 0.7;
+  -webkit-transform:scale(1.15);
+  -moz-transform:scale(1.15);
+  -ms-transform:scale(1.15);
+  -o-transform:scale(1.15);
+  transform:scale(1.15);
+}
+#cards_landscape_wrap-2 .card-flyer .text-box{
+  text-align: center;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box .text-container{
+  padding: 30px 18px;
+}
+#cards_landscape_wrap-2 .card-flyer{
+  background: #FFFFFF;
+  margin-top: 50px;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.40);
+}
+#cards_landscape_wrap-2 .card-flyer:hover{
+  background: #fff;
+  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.50);
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  -ms-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin-top: 50px;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box p{
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #000000;
+}
+#cards_landscape_wrap-2 .card-flyer .text-box h6{
+  margin-top: 0px;
+  margin-bottom: 4px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'Roboto Black', sans-serif;
+  letter-spacing: 1px;
+  color: #00acc1;
+}body{
+font-family:helvetica;
+}
+
+
+
+
+.frame {
+  width: 90%;
+  margin: 40px auto;
+  text-align: center;
+}
+button4{
+  margin: 20px;
+}
+.custom-btn {
+  width: 100px;
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  outline: none;
+}
+
+
+
+/* 2 */
+.btn-2 {
+  background: rgb(96,9,240);
+  background: linear-gradient(0deg, rgba(96,9,240,1) 0%, rgba(129,5,240,1) 100%);
+  border: none;
+
+}
+.btn-2:before {
+  height: 0%;
+  width: 2px;
+}
+.btn-2:hover {
+  box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+              -4px -4px 6px 0 rgba(116, 125, 136, .5),
+    inset -4px -4px 6px 0 rgba(255,255,255,.2),
+    inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+}
+.container6{
+  margin: 0 auto;
+
+  padding-top:50px;
+}
+
+.one{
+
+
+  float:left;
+}
+.two{
+
+
+  overflow:hidden;
+}
+
+.profile_table table, tr, td, th
+{
+  border: 0!important;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+
+
+
+.navbar .container{
+    background-color:white;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+// Hide After 5 Secs Animation
+
+body > div{
+    border:1px solid grey;
+}
+html, body, #container {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#container {
+    overflow:hidden;
+    position:relative;
+}
+#hideMe {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.active{
+    background:white;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:white;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:white;
+    color:#000000;
+ text-decoration:none;
+}
+.fa.fa-search{
+color:white;
+}
+.fa-search:hover{
+    color:#000000 !important;
+}
+</style>
+<body>
+
+    <div class="primary-nav" >
+
+	<button class="hamburger open-panel nav-toggle">
+<span class="screen-reader-text">Menu</span>
+</button>
+
+	<nav role="navigation" style="background:#FF4433;" class="menu">
+
+		<a href="{%url 'index'%}" class="logotype ">Interns<span> Port@l </span></a>
+
+		<div class="overflow-container">
+
+			<ul  class="menu-dropdown">
+			<li >
+                    <a style="color:#000000;" href="{%url 'company'%}" class="w3-bar-item active"><i class="fa fa-tachometer" ></i> Dashboard</a>
+				<!--<a style=color:white" href="{%url 'company'%}">Dashboard</a>-->
+                    <span class="icon"><i style="color:black" class="fa fa-dashboard"></i></span></li>
+
+				<li class="menu-hasdropdown">
+				    <a href="#" class="w3-bar-item" > Jobs</a>
+					<span class="icon">
+
+					    <i class="fa fa-search"></i></span>
+
+					<label title="toggle menu" for="settings">
+        <span class="downarrow"><i style="color:white" class="fa fa-caret-down"></i></span>
+      </label>
+					<input type="checkbox" class="sub-menu-checkbox" id="settings" />
+
+					<ul class="sub-menu-dropdown">
+
+						<li><a href="{%url 'add_job'%}">Add Jobs</a></li>
+						<li><a href="{%url 'view_job'%}">View Jobs</a></li>
+					</ul>
+				</li>
+<li class="menu-hasdropdown">
+					<a href="#">Internship</a><span class="icon">
+	<i style="color:white" class="fa fa-laptop"></i></span>
+
+					<label title="toggle menu" for="settings1">
+        <span class="downarrow"><i style="color:white" class="fa fa-caret-down"></i></span>
+      </label>
+					<input type="checkbox" class="sub-menu-checkbox" id="settings1" />
+
+					<ul class="sub-menu-dropdown">
+						<li><a href="{%url 'add_internship'%}">Add Internship</a></li>
+						<li><a href="{%url 'view_internship'%}">View Internship</a></li>
+					</ul>
+				</li>
+				<li class="menu-hasdropdown">
+					<a href="#">Resumes</a><span class="icon">
+					<i style="color:white" class="fa fa-bars"></i></span>
+
+					<label title="toggle menu" for="settings3">
+        <span class="downarrow"><i style="color:white" class="fa fa-caret-down"></i></span>
+      </label>
+					<input type="checkbox" class="sub-menu-checkbox" id="settings3" />
+
+					<ul class="sub-menu-dropdown">
+						<li><a href="{%url 'resumes'%}"> Jobs Resume</a></li>
+						<li><a href="{%url 'internship_resume'%}">Internship Resume</a></li>
+					</ul>
+				</li>
+
+<li class="menu-hasdropdown">
+
+					<a href="#">Blogs</a><span class="icon">
+					<i style="color:white" class="fa fa-pencil"></i></span>
+
+					<label title="toggle menu" for="settings2">
+        <span class="downarrow"><i style="color:white" class="fa fa-caret-down"></i></span>
+      </label>
+					<input type="checkbox" class="sub-menu-checkbox" id="settings2" />
+
+					<ul class="sub-menu-dropdown">
+						<li><a href="{%url 'add_blogs'%}">Add Blogs</a></li>
+						<li><a href="{%url 'view_add_blogs'%}">View Blogs</a></li>
+					</ul>
+				</li>
+
+				<!--<li><a href="{%url 'company_change_password'%}">Change Password</a><span class="icon"><i class="fa fa-sign-out"></i></span></li>-->
+				<li><a href="{%url 'company_profile_view'%}">Profile</a>
+                    <span class="icon"><i style="color:white" class="fa fa-sign-out"></i></span></li>
+
+				<li><a href="{%url 'companylogout'%}">Logout</a>
+                    <span class="icon"><i style="color:white" class="fa fa-sign-out"></i></span></li>
+
+			</ul>
+
+		</div>
+
+	</nav>
+
+</div>
+
+<!--<div class="top">-->
+<!--	<p style="margin-right:5px;"> {% if request.session.email%}-->
+<!--                  <b style="text-color:black"><span class="icon"><i class="fa fa-user"></i></span>-->
+<!--					  {{ request.session.email}}-->
+
+<!--					  {%endif%}-->
+<!--				  </b>-->
+<!--		</p>-->
+
+
+
+
+
+<!--</div>-->
+
+<div class="w3-main" style="margin-left:200px">
+
+
+
+        <nav class="navbar navbar-fixed-top navbar-dark bg-dark ">
+          <div class="container">
+            <div class="navbar-header">
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right">
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  <span class="glyphicon glyphicon-user" style="color:black;font-size:15px"></span><b class="caret"  style="color:black;font-size:15px"></b></a>
+                  <ul class="dropdown-menu" >
+                       <li>
+                      <a href="" title="Profile" style="background:black;color:white">
+                          {% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a href="{%url 'company_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a href="{%url 'company_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a href="{%url 'companylogout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+
+
+
+
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+        </nav>
+     </div>
+{% block content%}
+{%endblock%}
+<div class="footer">
+                            <p >Copyright &copy;  <a style="color:blue; text-decoration:none;" href="https://sparsematrix.co.in/"> eSparse Matrix Solutions Pvt Ltd.  </a> All Rights Reserved. 2021</p>
+</div>
+</body>
+<script>
+    $('.nav-toggle').click(function(e) {
+
+  e.preventDefault();
+  $("html").toggleClass("openNav");
+  $(".nav-toggle").toggleClass("active");
+
+});
+</script>
+</html>

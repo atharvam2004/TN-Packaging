@@ -1,0 +1,87 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Update Jobs
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+            <h1 align="center">Update Jobs</h1>
+
+
+    <div class="form-style-3" >
+<form method="POST" >
+                    {% csrf_token %}
+    {% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+                    {% for item in job_detail %}
+    <fieldset style="background:#ffdd99;" ><legend style="color:#ffdd99;
+  background: #5E8C88">UPDATE JOB</legend>
+    <label ><span>Company Name <span class="required">*</span></span>
+
+        <input style="border-radius:30px " type="text" value="{{ item.company_name }}" name="company_name"></label>
+                     <label ><span>Email-Address <span class="required">*</span></span> <input type="text" value="{{ item.email_address }}" name="email_address">
+                     </label>
+         <label ><span>Job Type <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.job_type }}" name="job_type">
+         </label>
+         <label ><span>Job Title <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.job_title }}" name="job_title">
+         </label>
+         <label ><span>Skills <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.required_skill }}" name="required_skill">
+         </label>
+         <label ><span>Experience Required <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.experience_requirements }}" name="experience_requirements">
+         </label>
+         <label ><span>Job Description <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.job_description }}" name="job_description">
+         </label>
+        <label ><span>Responsibilities <span class="required">*</span></span>
+            <input style="border-radius:30px " type="text" value="{{ item.responsibilities }}" class="input-field" required name="responsibilities"  /></label>
+<label ><span>Work Mode <span class="required">*</span></span>
+    <input style="border-radius:30px " type="text" class="input-field" value="{{ item.work_mode }}" required name="work_mode"  /></label>
+<label ><span>About Company <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.about_company }}" name="about_company">
+
+        </fieldset>
+    <fieldset style="background:#ffdd99;"><legend></legend>
+         <label ><span>Location <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.location }}" class="input-field" required name="location"  /></label>
+
+<label ><span>No Of Positions <span class="required">*</span></span>
+    <input style="border-radius:30px " type="text" class="input-field" value="{{ item.no_of_positions }}" required name="no_of_positions"  /></label>
+<label ><span>Stipend <span class="required">*</span></span>
+    <input style="border-radius:30px " type="text" class="input-field" required name="stipend"  value="{{ item.stipend }}" /></label>
+<label ><span>Appliaction Deadline <span class="required">*</span></span>
+    <input style="border-radius:30px " type="text" class="input-field" value="{{ item.application_deadline }}" required name="application_deadline"  /></label>
+ <label ><span>Responsibilities <span class="required">*</span></span>
+                     <input style="border-radius:30px " type="text" value="{{ item.responsibilities }}" name="responsibilities">
+ </label>
+         <label ><span>Qualification <span class="required">*</span></span>
+                    <input style="border-radius:30px " type="text" value="{{ item.required_qualification }}" name="required_qualification">
+         </label>    {% endfor %}
+
+<label style="text-align:center"><span> </span><input style="border-radius:30px;color:#ffdd99;
+  background: #5E8C88;" type="submit" value="UPDATE" /></label>
+
+    </fieldset>
+</form>
+            </div>
+
+</div>
+    </div>
+</div>
+
+
+
+{%endblock%}

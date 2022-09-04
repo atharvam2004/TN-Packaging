@@ -1,0 +1,892 @@
+
+<!doctype html>
+    {%load static%}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Internship Form</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  <!-- Template CSS -->
+  <!-- <link rel="stylesheet" href="{%static 'css/style-starter.css'%}"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+.nav_items .w3-bar-item{
+  /* text-align: center; */
+}
+.w3-green, .w3-hover-green:hover{
+  background-color: blue!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: blue!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+ body
+{
+background:transparent;
+}
+ body
+{
+background:transparent;
+}
+
+
+    /*form styles*/
+        #msform {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            position: relative;
+            margin-top: 30px;
+            height:400px
+        }
+
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 80%;
+            margin: 0 10%;
+
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+
+        /*Hide all except first fieldset*/
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        /*inputs*/
+        #msform input, #msform textarea {
+            padding: 1%;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: black;
+            font-size: 13px;
+        }
+         #msform label {
+
+            font-family: montserrat;
+            color: #2C3E50;font-size: 13px;
+
+
+
+        }
+ #msform select {
+            padding: 1%;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-family: montserrat;
+            color: #2C3E50;font-size: 13px;
+            /* -webkit-appearance: none !important; */
+
+
+
+        }
+        #msform input:focus, #msform textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #ee0979;
+            outline-width: 0;
+            transition: All 0.5s ease-in;
+            -webkit-transition: All 0.5s ease-in;
+            -moz-transition: All 0.5s ease-in;
+            -o-transition: All 0.5s ease-in;
+        }
+
+        /*buttons*/
+        #msform .action-button {
+            width: 100px;
+            /* background: rgb(255, 107, 0); */
+            background: blue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button:hover, #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+        }
+
+        #msform .action-button-previous {
+            width: 100px;
+            /* background: #C5C5F1; */
+            background: blue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px ;
+        }
+
+        /*headings*/
+        .fs-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+
+        }
+
+        .fs-subtitle {
+            font-weight: normal;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        #msform .info{
+          text-align: left;
+          color: black;
+        }
+        #msform .form_dropdown{
+          padding:8px;
+        }
+        #msform .form_checkbox {
+
+          text-align: left;
+        }
+        #msform  .cb{
+          width: 6%;
+        }
+        #msform  .name{
+          margin: 0%;
+        }
+        #msform  .details_text{
+          padding:5px;
+        }
+        #msform  .skills{
+          padding:2%;
+          border-radius: 10%;
+          background-color: white;
+          margin: 3%;
+          font-weight: 500;
+        }
+        #msform  .edu_add_btn{
+          font-family: 'Poppins', sans-serif;
+          color: black;
+          text-align: left;
+          width: 40%;
+          background-color: white;
+          border: 0px;
+          font-size: 15px;
+        }
+        #msform  .sub_info{
+          text-align: left;
+          font-size: 9px;
+          color: grey;
+        }
+
+
+
+
+        /*progressbar*/
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            /*CSS counters to number the steps*/
+            counter-reset: step;
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 9px;
+            width: 16.66%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        #progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 24px;
+            height: 24px;
+            line-height: 26px;
+            display: block;
+            font-size: 12px;
+            color: #333;
+            background: white;
+            border-radius: 25px;
+            margin: 0 auto 10px auto;
+        }
+
+        /*progressbar connectors*/
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: -50%;
+            top: 9px;
+            z-index: -1; /*put it behind the numbers*/
+        }
+
+        #progressbar li:first-child:after {
+            /*connector not needed before the first step*/
+            content: none;
+        }
+
+        /*marking active/completed steps green*/
+        /*The number of the step and the connector before it = green*/
+        #progressbar li.active:before, #progressbar li.active:after {
+            /* background: #ee0979; */
+            background: blue;
+            color: white;
+        }
+
+
+        /* Not relevant to this form */
+        .dme_link {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .dme_link a {
+            background: #FFF;
+            font-weight: bold;
+            color: #ee0979;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 5px 25px;
+            font-size: 12px;
+        }.dashboard{
+    border: 1px solid white;
+    background: white;
+    border-radius: 37px;
+    border-width: 10px;
+}
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;e
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+.active{
+    background:#F9E79F;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+
+
+.w3-green, .w3-hover-green:hover{
+  background-color: #008080!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #008080!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+    background:#FF4433;
+}
+
+ body
+{
+background:transparent;
+}
+ .career-desc{
+      border:1px solid black;
+      border-top:none;
+      height: 400px;
+    }
+    .career-headling{
+      background:#FF4433;
+      color:black;
+      font-weight: 500;
+      font-size:2em;
+      text-align:center;
+      text-transform: capitalize;
+      border:1px solid black;
+    }
+    .hover{
+
+    }
+.hoover:hover{
+    background-color:#FF4433;
+    color:white;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+body
+{
+background:transparent;
+}
+
+
+
+
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+.nav_items .w3-bar-item{
+  /* text-align: center; */
+}
+.w3-green, .w3-hover-green:hover{
+  background-color: blue!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: blue!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+ body
+{
+background:transparent;
+}
+
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+</style>
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;" id="mySidebar">
+    <button style="background:#FF4433;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <header class="avatar">
+            <h3 style="margin-left:15%;color:white;">Interns World</h2>
+    		<img class="img_logo" src="/static/images/logo.png" width="30px" />
+  <h4 style="margin-left:15%;color:white;">
+                   {% if request.session.email%}
+                  {{ request.session.first_name}}
+
+
+					  {%endif%}
+
+        </h4>           </header>
+        <br>
+        <br>
+        <div class="nav_items">
+                       <a  href="/userdashboard/"  class="w3-bar-item w3-hover-white" ><i class="fa fa-file-text-o" ></i> Dashboard</a>
+
+
+            <button  class="w3-button w3-block  w3-bar-item w3-hover-white" onclick="myAccFunc()"><i class="fa fa-file-text-o" ></i> Resume <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAcc" class="w3-hide w3-white-w3-card">
+              <a href="/applicationform/" class="w3-bar-item w3-hover-white">Make resume</a>
+              <a href="/userresumes" class="w3-bar-item w3-hover-white">View resume</a>
+            </div>
+            <a  href="/user_job/" class="w3-bar-item w3-hover-white" ><i class="fa fa-search" ></i> Jobs</a>
+
+            <a  href="/user_internship/"class="w3-bar-item w3-hover-white"><i class="fa fa-briefcase" ></i> Internship</a>
+            <a  href="/profile/"  class="w3-bar-item w3-hover-white"  style="background:white;color:black"><i class="fa fa-user" ></i> Profile</a>
+            <a  href="/logout/"  class="w3-bar-item w3-hover-white"><i class="fa fa-sign-out" ></i> Log Out</a>
+        </div>
+
+  </div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <!--    <div class="w3-container" >-->
+    <!--      <h4 style="text-align: right;">{% if request.session.email%}-->
+    <!--                  {{ request.session.email}}-->
+
+    <!--					  {%endif%}</h4>-->
+    <!--    </div>-->
+
+     <div class="w3-black">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+     </div>
+
+        <nav class="navbar navbar-fixed-top navbar-dark  " style="background:white">
+          <div class="container" style="background:white;">
+            <div class="navbar-header">
+
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right"  style="background:transparent">
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <!--bell-->
+
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+
+                  <span class="glyphicon glyphicon-user" style="color:black; background:white;"></span><b class="caret" style="color:black; background:white"></b></a>
+                  <ul class="dropdown-menu">
+                       <li>
+                      <a href="" title="Profile" style="background:#FF4433;;color:white">{% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'user_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a class="hoover" href="{%url 'user_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'logout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+</div>
+
+
+
+
+
+
+
+
+
+        {% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+<div class="container" style="margin-left:120px">
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+ <form id="msform"  method="POST"  >
+                 {% csrf_token %}
+       <fieldset>
+                  <h4 class="p-3 mb-2 " style="background:#FF4500;color:white;font-size:20px"><i class=" fa fa-tick"></i>
+        EDIT PROFILE</h4>
+
+
+
+            {% for p in profile %}
+                         <p class="info"> USERNAME</p>
+
+                <input type="text" name="first_name" value="{{p.first_name}}"/>
+                                <p class="info"> EMAIL</p>
+<input type="email" name="email" value="{{p.email}}"/>
+                              <p class="info"> MOBILE NUMBER</p>
+  <input type="number" name="phone" value="{{p.phone}}"/>
+                                <p class="info"> CITY</p>
+<input type="text" name="city" value="{{p.city}}"/>
+            {% endfor %}
+            <input type="submit" style="background:#FF4500;color:white;font-size:20px" value="Save"/>
+           </fieldset>
+        </form>
+
+    </div>
+</div>
+
+
+
+<script>
+  function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+<!-- Clarity Section -->
+</body>
+</html>
+
+
+

@@ -1,0 +1,77 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Profile
+{%endblock%}
+
+{%block content%}
+<!-----------------------header---------------------------->
+
+
+<!---------------------------profile---------------------------------------------------->
+<div class="new-wrapper">
+
+	<div id="main">
+
+        <div id="main-contents">
+                    <h3 class="animate__animated animate__zoomIn" align="left" style="margin-top:30px;color:black; margin-left:6%;  font-family:cursive;">Profile</h3>
+
+            <div class="card profile_table" style="background:#FF4433;">
+                 <a href="{%url 'company_profile_update'%}"><i class="fa fa-pen fa-s edit" style="right:-40%;position:relative;color:white"></i></a>
+                 {% for query in Query %}
+
+
+                 <table >
+                    <tbody style="font-family:sans-serif; font-size:24;">
+                        <tr>
+                            <td style="width:25%;color:White;"><b>Username</b></td>
+                            <td style="color:White;">:</td>
+                            <td style="color:White;"><i>{{query.username}}</i></td>
+
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:White;"><b>Organization Name</b></td>
+                            <td style="color:White;">:</td>
+                            <td style="color:White;"><i>{{query.organization_name}}</i></td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:White;"><b>Description</b></td>
+                            <td style="color:White;">:</td>
+                            <td style="color:White;"><i>{{query.organization_description}}</i></td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:White;"><b>Phone No.</b></td>
+                            <td style="color:White;">:</td>
+                            <td style="color:White;"><i>{{query.phone}}</i></td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:White;"><b>Location</b></td>
+                            <td style="color:White;">:</td>
+                            <td style="color:White;"><i>{{query.address}}</i></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+                <!--<h4>  <p style="background-color:black;color:white;">{{query.username}}</p></h3>-->
+
+                <!-- <p class="title"><b>Organization_Name:</b> {{query.organization_name}}</p>-->
+                <!-- <p><b>Description:</b> {{query.organization_description}}</p>-->
+                <!-- <p><b>Phone_Number:</b> {{query.phone}}</p>-->
+                <!-- <p><b>Location:</b> {{query.address}}</p>-->
+
+
+
+
+                  {% endfor %}
+             </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+{%endblock%}

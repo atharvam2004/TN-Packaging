@@ -1,0 +1,66 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Update Blogs
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+    <div class="form-style-3" >
+<form method="POST" enctype="multipart/form-data" >
+     {% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+                    {% csrf_token %}
+
+                    {% for item in blog_detail %}
+    <fieldset  style="background:#ffdd99;" ><legend style="color:#ffdd99;
+  background: #5E8C88">UPDATE BLOG</legend>
+    <label ><span>Company Name <span class="required">*</span></span>
+
+        <input style="border-radius:30px " type="text" value="{{ item.company_name }}" name="company_name"></label>
+                     <label ><span>Email-Address <span class="required">*</span>
+                     </span> <input style="border-radius:30px " type="text" value="{{ item.email_address }}" name="email_address">
+                     </label>
+         <label ><span>Location <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.location }}" name="location">
+         </label>
+         <label ><span>Title <span class="required">
+             *</span></span> <input style="border-radius:30px " type="text" value="{{ item.title }}" name="title">
+         </label>
+         <label ><span>Sub Title <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" value="{{ item.sub_title }}"
+                    name="sub_title">
+         </label>
+
+        </fieldset>
+  <fieldset  style="background:#ffdd99;"><legend></legend>
+       <label ><span>Description <span class="required">*</span></span>
+           <input style="border-radius:30px " type="text" value="{{ item.description }}" name="description" required class="input-fiels"></label>
+<label ><span>Select Image <span class="required">*</span></span>
+    <input style="border-radius:30px " class="input-field" type="file" id="myfile" name="uploads" value="{{ item.uploads.url }}" required></label>
+<label style="text-align:center"><span> </span><input  style="border-radius:30px;color:#ffdd99;
+  background: #5E8C88;" type="submit" value="Submit" /></label>
+</fieldset>
+
+ {% endfor %}
+
+</form>
+          </div>
+
+        </div>
+    </div>
+</div>
+
+  <!-- //script for testimonials -->
+
+
+{%endblock%}

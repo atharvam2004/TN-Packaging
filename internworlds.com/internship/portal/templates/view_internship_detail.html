@@ -1,0 +1,135 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Company View
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+            <h3 class="animate__animated animate__zoomIn" align="center">
+                View Internship Details</h3>
+{% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+
+            {% for item in all_detail %}
+                   <table>
+                    <tr>
+                    <th style="background: #FF4433;">Company name</th>
+                    <td>{{ item.company_name }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Email-Address</th>
+                        <td>{{ item.email_address }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Job Type</th>
+                            <td>{{ item.internship_type }}</td>
+
+                    </tr>
+                    <tr>
+                        <th style="background: #FF4433;">Internship Title</th>
+                        <td>
+
+                            {{ item.internship_title }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Required Skill</th>
+                        <td>
+                            {{ item.required_skill }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Experience Requirements</th>
+                        <td>
+                    {{ item.experience_requirements }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Internship Description</th>
+                        <td>
+                    {{ item.internship_description }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Responsibilities</th>
+                        <td>
+                     {{ item.responsibilities }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #FF4433;">Qualification</th>
+                        <td>
+                    {{ item.required_qualification }}
+                        </td>
+                    </tr>
+ <tr>
+                        <th style="background: #FF4433;">About Company</th>
+                        <td>
+                    {{ item.about_company }}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #FF4433;">Stipend</th>
+                        <td>
+                    {{ item.stipend}}
+                        </td>
+                    </tr>
+ <tr>
+                        <th style="background: #FF4433;">No of Positions</th>
+                        <td>
+                    {{ item.no_of_positions}}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #FF4433;">Application Deadline</th>
+                        <td>
+                    {{ item.application_deadline}}
+                        </td>
+                    </tr>
+                           <tr>
+                        <th style="background: #FF4433;">Work Mode</th>
+                        <td>
+                    {{ item.work_mode}}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #FF4433;">Location</th>
+                        <td>
+                    {{ item.location}}
+                        </td>
+                    </tr>
+                    </table>
+        </div>
+
+<br/>
+
+
+        <button style="width:150px;margin-left:230px;height:40px;
+         background:#ffdd99;border-radius:5px"><a style="color:#5E8C88;" href="{% url 'update_internship' item.id %}"  >Edit</a></button>
+        <button style="width:150px;height:40px;
+         background:#ffdd99;border-radius:5px"><a  style="color:#5E8C88;" href="{% url 'delete_internship' item.id %}"  >Delete</a></button>
+
+
+
+    {%endfor%}
+</div>
+</div>
+  <!-- //script for testimonials -->
+
+
+{%endblock%}

@@ -1,0 +1,535 @@
+
+<!doctype html>
+    {%load static%}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Internship Form</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link href="https//fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <!-- <link rel="stylesheet" href="{%static 'css/style-starter.css'%}"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+
+
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+.active{
+    background:white;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:white;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-green, .w3-hover-green:hover{
+  background-color: #FF4433!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #FF4433!important;
+}
+  table {
+	width: 850px;
+	border-collapse: collapse;
+	margin:50px auto;
+	}
+
+/* Zebra striping */
+tr:nth-of-type(odd) {
+	background: #eee;
+	}
+
+th {
+	background: #3498db;
+	color: white;
+	font-weight: bold;
+	}
+
+td, th {
+	padding: 10px;
+	border: 1px solid #ccc;
+	text-align: left;
+	font-size: 18px;
+	}
+
+/*
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	table {
+	  	width: 100%;
+	}
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr {
+        padding:2%!important;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	tr { border: 1px solid ; }
+
+	td {
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee;
+		position: relative;
+		padding-left: 50%;
+	}
+
+	td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		/* Label the data */
+		content: attr(data-column);
+
+		color: #000;
+		font-weight: bold;
+	}
+
+
+}
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+@media (max-width: 400px) {
+	.profile_table table, tr, td, th{
+	    display:block;
+	}
+}
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+ body
+{
+background-color:white;
+}
+
+/*profile*/
+.new-wrapper {
+    font-size:1em;
+	position: absolute;
+	left: 50px;
+  width: calc(100% - 50px);
+  transition: transform .45s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.card {
+  box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  height:100%;
+  border-radius:30px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.profile_table table, tr, td, th {
+    border: 0!important;
+    background-color: #f1f1f1;
+    width:auto;
+    margin:0px;
+    padding:;
+
+
+}
+.new-wrapper #main {
+    padding: 4% 1.5em;
+    max-width: 50em;
+    margin: 0 auto;
+}
+.profile_table a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+
+</style>
+</head>
+<body>
+
+ <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;background:#FF4433;" id="mySidebar">
+    <button style="background:#FF4433;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <header class="avatar">
+    		<img class="img_logo" src="{%static 'images/logo.png'%}" width="30px" />
+  <h4 style="margin-left:15%;color:white">
+      {% if request.session.email%}
+                  {{ request.session.first_name}}
+
+					  {%endif%}
+
+        </h4>           </header>
+        <br>
+        <br>
+        <div class="nav_items">
+            <a href="{%url 'userdashboard'%}" class="w3-bar-item"><i class="fa fa-tachometer" ></i> Dashboard</a>
+            <button  class="w3-button w3-block  w3-bar-item w3-hover-white " onclick="myAccFunc()"><i class="fa fa-file-text-o" ></i> Resume <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAcc" class="w3-hide w3-white-w3-card">
+              <a href="{%url 'Application_Form'%}" class="w3-bar-item ">Resume Builder</a>
+              <a href="{%url 'userresume'%}" class="w3-bar-item ">View resume</a>
+            </div>
+            <a  href="{%url 'user_job'%}" class="w3-bar-item "><i class="fa fa-search" ></i> Jobs</a>
+
+            <a " href="{%url 'user_internship'%}"class="w3-bar-item "><i class="fa fa-briefcase" ></i> Internship</a>
+            <a  style="color:#000000; href="{%url 'profile'%}"  class="w3-bar-item active"><i class="fa fa-user" ></i> Profile</a>
+            <a  href="{%url 'logout'%}"  class="w3-bar-item "><i class="fa fa-sign-out" ></i> Log Out</a>
+        </div>
+
+  </div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <!--    <div class="w3-container" >-->
+    <!--      <h4 style="text-align: right;">{% if request.session.email%}-->
+    <!--                  {{ request.session.email}}-->
+
+    <!--					  {%endif%}</h4>-->
+    <!--    </div>-->
+
+     <div class="w3-black">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+     </div>
+
+        <nav class="navbar navbar-fixed-top navbar-dark  " style="background:white">
+          <div class="container" style="background:white">
+            <div class="navbar-header">
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right" >
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                  <span class="glyphicon glyphicon-user" style="color:white"></span><b class="caret" style="color:white"></b></a>
+                  <ul class="dropdown-menu">
+                       <li>
+                      <a href="" title="Profile" style="background:black;color:white">{% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a class="w3-hover-khaki" href="{%url 'user_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a class="w3-hover-khaki" href="{%url 'user_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a class="w3-hover-khaki" href="{%url 'logout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+
+
+
+
+<!--    <h1 align="center" style="margin-top:45px"><U> USER PROFILE</U></h1>-->
+<!--         {% for query in Query %}-->
+<!--<table>-->
+<!--    <tr>-->
+<!--        <th>USER NAME</th>-->
+<!--        <th style="background:white;color:black">{{query.first_name}}</th>-->
+<!--    </tr>-->
+
+<!--    <tr>-->
+<!--        <th>EMAIL ADDRESS</th>-->
+<!--        <th style="background:white;color:black">{{query.email}}</th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <th>Phone Number</th>-->
+<!--        <th style="background:white;color:black">{{query.phone}}</th>-->
+<!--    </tr><tr>-->
+<!--        <th>CITY</th>-->
+<!--      <th style="background:white;color:black">{{query.city}}</th>-->
+<!--    </tr>-->
+<!--</table>-->
+
+ <!--<p align="center"> <button type="button" style="background:black;color:white" class="btn btn-elegant"><a href="{%url 'user_profile_update'%}">Edit  Profile</a></button>-->
+ <!--</p>-->
+
+ <!--         {% endfor %}-->
+ <!--   </div>-->
+
+<div class="new-wrapper">
+
+	<div id="main">
+
+        <div id="main-contents" >
+                    <h3 class="animate__animated animate__zoomIn" align="left" style="margin-top:100px; margin-left:8%;  font-family:cursive; font-weight:800; font-size:2.8em">Profile</h3>
+
+            <div style="background:#FF4433;" class="card profile_table" >
+                 <a href="{%url 'user_profile_update'%}"><i class="glyphicon glyphicon-pencil" style="right:-40%;position:relative;color:white"></i></a>
+                 {% for query in Query %}
+
+
+                 <table>
+
+                        <tr >
+                            <td style="width:25%;color:white;background:#FF4433;"><b>Username</b></td>
+                            <td style="color:white;background:#FF4433;">:</td>
+                            <td style="color:white;background:#FF4433;"><i>{{query.first_name}}</i></td>
+
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:white;background:#FF4433;"><b>E-mail</b></td>
+                            <td style="color:white;background:#FF4433;">:</td>
+                            <td style="color:white;background:#FF4433;"><i>{{query.email}}</i></td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:white;background:#FF4433;"><b>Phone No.</b></td>
+                            <td style="color:white;background:#FF4433;">:</td>
+                            <td style="color:white;background:#FF4433;"><i>{{query.phone}}</i></td>
+                        </tr>
+                        <tr>
+                            <td style="width:25%;color:white;background:#FF4433;"><b>City</b></td>
+                            <td style="color:white;background:#FF4433;">:</td>
+                            <td style="color:white;background:#FF4433;"><i>{{query.city}}</i></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+
+                  {% endfor %}
+             </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+
+
+
+
+
+
+<script>
+
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+
+
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+            'transform': 'scale('+scale+')',
+            'position': 'absolute'
+          });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(document).ready(function(){
+      $(".education").hide();
+
+      $(".edu_add1").click(function(){
+          $(".edu1").show();
+      });
+      $(".edu_add2").click(function(){
+          $(".edu2").show();
+      });
+      $(".edu_add3").click(function(){
+          $(".edu3").show();
+      });
+      $(".edu_add4").click(function(){
+          $(".edu4").show();
+      });
+      $(".edu_add5").click(function(){
+          $(".edu5").show();
+      });
+      $(".edu_add6").click(function(){
+          $(".edu6").show();
+      });
+    });
+
+</script>
+
+<!-- left navigation bar -->
+<script>
+  function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+

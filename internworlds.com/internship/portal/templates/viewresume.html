@@ -1,0 +1,748 @@
+
+<!doctype html>
+    {%load static%}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Internship Form</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link href="https//fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <!-- <link rel="stylesheet" href="{%static 'css/style-starter.css'%}"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+.active{
+    background:#F9E79F;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+
+
+.w3-green, .w3-hover-green:hover{
+  background-color: #008080!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #008080!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+    background:#5E8C88
+}
+
+ body
+{
+background:transparent;
+}
+.dashboard{
+    border: 1px solid white;
+    background: white;
+    border-radius: 37px;
+    border-width: 10px;
+}
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+.active{
+    background:#F9E79F;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+
+
+.w3-green, .w3-hover-green:hover{
+  background-color: #008080!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #008080!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+    background:#FF4433;
+}
+
+ body
+{
+background:transparent;
+}
+ .career-desc{
+      border:1px solid black;
+      border-top:none;
+      height: 400px;
+    }
+    .career-headling{
+      background:#FF4433;
+      color:black;
+      font-weight: 500;
+      font-size:2em;
+      text-align:center;
+      text-transform: capitalize;
+      border:1px solid black;
+    }
+    .hover{
+
+    }
+.hoover:hover{
+    background-color:#FF4433;
+    color:white;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+ body
+{
+background:transparent;
+}
+
+</style>
+</head>
+<body>
+
+ <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;" id="mySidebar">
+    <button style="background:#FF4433;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <header class="avatar">
+            <h3 style="margin-left:15%;color:white;">Interns World</h2>
+    		<img class="img_logo" src="/static/images/logo.png" width="30px" />
+  <h4 style="margin-left:15%;color:white;">
+                   {% if request.session.email%}
+                  {{ request.session.first_name}}
+
+
+					  {%endif%}
+
+        </h4>           </header>
+        <br>
+        <br>
+        <div class="nav_items">
+                       <a  href="/userdashboard/"  class="w3-bar-item w3-hover-white" ><i class="fa fa-file-text-o" ></i> Dashboard</a>
+
+
+            <button  class="w3-button w3-block  w3-bar-item w3-hover-white" style="background:white;color:black"onclick="myAccFunc()"><i class="fa fa-file-text-o" ></i> Resume <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAcc" class="w3-hide w3-white-w3-card">
+              <a href="/applicationform/" class="w3-bar-item w3-hover-white" style="background:white">Make resume</a>
+              <a href="/userresumes" class="w3-bar-item w3-hover-white" style="background:white">View resume</a>
+            </div>
+            <a  href="/user_job/" class="w3-bar-item w3-hover-white" ><i class="fa fa-search" ></i> Jobs</a>
+
+            <a  href="/user_internship/"class="w3-bar-item w3-hover-white"><i class="fa fa-briefcase" ></i> Internship</a>
+            <a  href="/profile/"  class="w3-bar-item w3-hover-white"><i class="fa fa-user" ></i> Profile</a>
+            <a  href="/logout/"  class="w3-bar-item w3-hover-white"><i class="fa fa-sign-out" ></i> Log Out</a>
+        </div>
+
+  </div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <!--    <div class="w3-container" >-->
+    <!--      <h4 style="text-align: right;">{% if request.session.email%}-->
+    <!--                  {{ request.session.email}}-->
+
+    <!--					  {%endif%}</h4>-->
+    <!--    </div>-->
+
+     <div class="w3-black">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+     </div>
+
+        <nav class="navbar navbar-fixed-top navbar-dark  " style="background:white">
+          <div class="container" style="background:white;">
+            <div class="navbar-header">
+
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right"  style="background:transparent">
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <!--bell-->
+
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+
+                  <span class="glyphicon glyphicon-user" style="color:black; background:white;"></span><b class="caret" style="color:black; background:white"></b></a>
+                  <ul class="dropdown-menu">
+                       <li>
+                      <a href="" title="Profile" style="background:#FF4433;;color:white">{% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'user_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a class="hoover" href="{%url 'user_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'logout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav
+<!--nav bar -->
+<div class="container1" style="margin-left:35px">
+    <br/>
+    <br/><br/>
+      <div class="row" >
+          <div class="col-md-4" style="border:1px solid #ccc;">
+              <img style="margin-top:40px;" class="img_logo" src="{%static 'images/logo.png'%}" width="30px" />
+
+              {% for resumes in Resume %}
+               <p   style="font-size:20px;margin-left:25%;margin-top:20px">{{resumes.fname}}</p>
+      <hr>
+        <p style="font-size:15px"> <u>PERSONAL DETAILS</u></p>
+        <ul class="list-group">
+            <li class="list-group-item active" aria-current="true"><i class="fa fa-envelope"></i>
+            {% if resumes.email == '' %}{%else%}
+                <a style="color:white" href="#">{{resumes.email}}</a></li>{%endif%}
+
+                {% if resumes.phone == '' %}{%else%}
+            <li class="list-group-item"><i class="fa fa-phone" ></i>
+                <a style="color:black" href="#">{{resumes.phone}}</a></li>{%endif%}
+
+                {% if resumes.hometown == '' %}{%else%}
+            <li class="list-group-item active"><i class="fa fa-building" ></i>
+                <a style="color:white" href="#">{{resumes.hometown}},{{resumes.city}}</a></li>{%endif%}
+            </ul>
+              {% if resumes.gitHub_profile == '' %}{%else%}
+                   <p style="font-size:15px"> <u>SOCIAL LINKS</u></p>
+                 <ul class="list-group">
+
+               {% if resumes.blog_link == '' %}{%else%}
+                <li class="list-group-item active" aria-current="true">Blog Links:
+                <a style="color:white;" href="#">{{resumes.blog_link}}</a></li>{%endif%}
+
+                 {% if resumes.gitHub_profile == '' %}{%else%}
+                 <li class="list-group-item">GitHub Profile:
+                <a style="color:black" href="#">{{resumes.gitHub_profile}}</a></li>{%endif%}
+
+                {% if resumes.play_store_link == '' %}{%else%}
+                 <li class="list-group-item active">Play Store Link:
+                <a style="color:white" href="#">{{resumes.play_store_link}}</a></li>{%endif%}
+
+                 {% if resumes.behance_portfolio == '' %}{%else%}
+                 <li class="list-group-item">Behance Portfolio:
+                <a style="color:black" href="#">{{resumes.behance_portfolio}}</a></li>{%endif%}
+
+                {% if resumes.other_work_sample == '' %}{%else%}
+                 <li class="list-group-item active">Other Links:
+                <a style="color:white" href="#">{{resumes.other_work_sample}}</a></li>{%endif%}
+                     </ul>
+                     {%endif%}
+                     {% if resumes.skills == '' %}{%else%}
+                     <p style="font-size:15px"> <u>SKILLS</u></p>
+                 {{resumes.skills}}{%endif%}
+                 </div>
+                 <div class="col-md-8" >
+                 <div class="container-fluid" style="border:solid 1px #ccc">
+                 <div style="font-size:16px" class="p-3 mb-2 bg-primary text-white;animate__animated animate__zoomIn">QUALIFICATIONS</div>
+                 {% if resumes.secondary_class == '' %}{%else%}
+                   <p style="font-size:15px"> <u>SCHOOL EDUCATION DETAILS</u></p>
+                 <table class="table table-sm table-dark" style="border:1px solid black;margin-top:10px">
+                   <thead>
+                 <tr style="background:black">
+                  <th style="color:white" scope="col">Class</th>
+                  <th style="color:white" scope="col">Name of School</th>
+
+                   <th style="color:white" scope="col">Percentage</th>
+                   <th style="color:white" scope="col">Passing Year</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    {% if resumes.secondary_class == '' %}{%else%}
+                  <tr>
+                    <th scope="row">X</th>
+                    <td>{{resumes.secondary_class}}</td>
+                    <td>{{resumes.secondary_percentage}}</td>
+                    <td>{{resumes.secondary_year}}</td>
+                  </tr>
+                  {%endif%}
+                  {% if resumes.seniorsecondary == '' %}{%else%}
+                  <tr>
+                    <th scope="row">XII</th>
+                   <td>{{resumes.seniorsecondary}}</td>
+                    <td>{{resumes.seniorecondary_percentage}}</td>
+                    <td>{{resumes.seniorsecondary_year}}</td>
+                  </tr>
+                  {%endif%}
+                </tbody>
+              </table>
+              {%endif%}
+              {% if resumes.graduation_field == '' %}{%else%}
+              <p style="font-size:15px"> <u>HIGHER EDUCATION DETAILS</u></p>
+              <table class="table table-sm table-dark"
+             style="border:1px solid black;margin-top:10px">
+
+              <thead>
+
+    <tr style="background:black">
+      <th style="color:white" scope="col">Degree</th>
+              <th style="color:white" scope="col">Name of University</th>
+
+      <th style="color:white" scope="col">Percentage/CGPA</th>
+              <th style="color:white" scope="col">Passing Year</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    {% if resumes.graduation_field == '' %}{%else%}
+    <tr>
+      <td>{{resumes.graduation_field}}</td>
+      <td>{{resumes.graduation_college}}</td>
+      <td>{{resumes.graduation_year}}</td>
+        <td>{{resumes.grad_percentage}}</td>
+    </tr>
+    {%endif%}
+    {% if resumes.post_graduation_field == '' %}{%else%}
+    <tr>
+     <td>{{resumes.post_graduation_field}}</td>
+      <td>{{resumes.post_graduation_college}}</td>
+      <td>{{resumes.post_graduation_year}}</td>
+        <td>{{resumes.post_graduation_percentage}}</td>
+    </tr>
+    {%endif%}
+    {% if resumes.Diploma_field == '' %}{%else%}
+<tr>
+     <td>{{resumes.Diploma_field}}</td>
+      <td>{{resumes.Diploma_college}}</td>
+      <td>{{resumes.Diploma_year}}</td>
+        <td>{{resumes.Diploma_percentage}}</td>
+
+    </tr>
+    {%endif%}
+     {% if resumes.Phd_field == '' %}{%else%}
+  <tr>
+     <td>{{resumes.Phd_field}}</td>
+      <td>{{resumes.Phd_college}}</td>
+      <td>{{resumes.Phd_year}}</td>
+        <td>{{resumes.Phd_percentage}}</td>
+
+    </tr>
+    {%endif%}
+  </tbody>
+</table>
+<hr/>
+{%endif%}
+         <br/>
+            {% if resumes.trainings_field == ''%}{%else%}
+         <div style="font-size:16px" class="p-3 mb-2 bg-primary text-white;animate__animated animate__zoomIn">JOBS & EXPERIENCE</div>
+                  <p style="font-size:215x"> <u>TRANNING AND COURSES</u></p>
+{% if resumes.trainings_field == ''%}{%else%}
+{{resumes.trainings_field}}
+                  <br/>{%endif%}
+                  <B>JOBS</B><br/>
+                  COMPANY NAME :{{resumes.Job_company_name}},{{resumes.Job_location}}<br/>
+                  DESIGNATION:{{resumes.Job_designation}}<br/>
+
+                                   DATE: {{resumes.Job_joining_date}} to {{resumes.Job_relieving_date}}
+
+        <br/>   <B>INTERNHSIPS</B><br/>
+                  COMPANY NAME :{{resumes.Internships_company_name}},{{resumes.Internships_location}}<br/>
+                  DESIGNATION:{{resumes.Internship_designation }}<br/>
+
+                                DATE: {{resumes.Internships_joining_date}} to {{resumes.Internships_relieving_date }}
+  <br/>  <B>PROJECTS DETAILS</B>
+  {%endif%}
+  {% if resumes.personal_projects_topic == ''%}{%else%}
+                  <table class="table table-sm table-dark" style="border:1px solid black;margin-top:10px">
+                      <tr style="background:black">
+                          <th  style="color:white" scope="col">Name Of the Project</th>
+                          <th  style="color:white" scope="col">Project Description</th>
+                          </tr>
+                      <tr>
+                          <th>{{resumes.personal_projects_topic}}</th>
+                          <th>{{resumes.personal_projects_description}}</th>
+
+                      </tr>
+                  </table>
+                  {%endif%}
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>//Call jQuery before below code
+$('.main-btn').click(function() {
+  $('.search-description').slideToggle(100);
+});
+$('.search-description li').click(function() {
+  var target = $(this).html();
+  var toRemove = 'By ';
+  var newTarget = target.replace(toRemove, '');
+  //remove spaces
+  newTarget = newTarget.replace(/\s/g, '');
+  $(".search-large").html(newTarget);
+  $('.search-description').hide();
+  $('.main-input').hide();
+  newTarget = newTarget.toLowerCase();
+  $('.main-' + newTarget).show();
+});
+$('#main-submit-mobile').click(function() {
+  $('#main-submit').trigger('click');
+});
+$(window).resize(function() {
+  replaceMatches();
+});
+
+function replaceMatches() {
+  var width = $(window).width();
+  if (width < 516) {
+    $('.main-location').attr('value', 'City or postal code');
+  } else {
+    $('.main-location').attr('value', 'Search by city or postal code');
+  }
+};
+replaceMatches();
+
+function clearText(thefield) {
+  if (thefield.defaultValue == thefield.value) {
+    thefield.value = ""
+  }
+}
+
+function replaceText(thefield) {
+  if (thefield.value == "") {
+    thefield.value = thefield.defaultValue
+  }
+}</script>
+<!-- Clarity Section -->
+</body>
+</html>
+

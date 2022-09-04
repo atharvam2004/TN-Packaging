@@ -1,0 +1,57 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Company View
+{%endblock%}
+
+{%block content%}<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+            <h3 class="animate__animated animate__zoomIn" align="center">View All Internships</h3>
+{% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+        <table >
+
+            <tr>
+                <th style="background: #FF4433;">Company Name</th>
+                <th style="background: #FF4433;">Company Email</th>
+                <th style="background: #FF4433;">Internship Type</th>
+                <th style="background: #FF4433;">Internship Title</th>
+                <th style="background: #FF4433;">Experience</th>
+                <th style="background: #FF4433;">Responsibilities</th>
+                <th style="background: #FF4433;">Actions</th>
+            </tr>
+            {% for item in all_detail %}
+                <tr>
+                    <td >{{ item.company_name }}</td>
+                    <td >{{ item.email_address }}</td>
+                    <td >{{ item.internship_type }}</td>
+                    <td >{{ item.internship_title }}</td>
+                    <td >{{ item.experience_requirements }}</td>
+                    <td >{{ item.responsibilities }}</td>
+                    <td >
+
+
+                    <button style="width:100px;height:30px;color:#ffdd99;
+  background: #5E8C88;border-radius:10px">   <a style="color:white"  href="{% url 'view_internship_detail' item.id %}">View</a> </button>
+
+
+                    </td>
+                </tr>
+
+              {% empty %}
+                <tr><td colspan="6" class="text-center">No Record Found</td></tr>
+            {% endfor %}
+        </table>
+ </div>
+        </div>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,66 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+View Blogs
+{%endblock%}
+
+{%block content%}<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+      {% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+            <h3 class="animate__animated animate__zoomIn" align="center">ALL BLOGS</h3>
+
+
+                   <!-- Topic Cards -->
+    <div id="cards_landscape_wrap-2" style="width:400px;   background-color: #eee;"
+
+        <div class="container" style="width:400px">
+
+{% for details in all_detail %}
+                    <a style="width:400px" href="">
+                        <div class="card-flyer" style="width:400px">
+                            <div class="text-box" >
+                                <div class="image-box" style="width:400px">
+                                    <img src="{{details.uploads.url}}" alt="" />
+                                </div>
+                                <div class="text-container">
+                                    <h6 align="left">Title</h6>
+                                    <p align="left">{{details.title}}</p>
+<br/>
+
+                                    <button style="color:#ffdd99;
+  background: #5E8C88;border-radius:10px" class="custom-btn btn-2"><a style="color:white" href="{%url 'view_add_blog_detail' details.id %}" >View</a></button>
+</div>
+                            </div>
+
+
+
+                        </div>
+                    </a>
+              {% empty %}
+                <p style="font-size:20px;margin-top:50px;" align="center" class="text-center">No Record Found</p>
+            {% endfor %}
+                </div>
+
+
+        </div>
+    </div>
+
+    </div>
+
+
+
+
+    </div>
+</div>
+
+
+{%endblock%}

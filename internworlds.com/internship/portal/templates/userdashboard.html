@@ -1,0 +1,503 @@
+
+<!doctype html>
+    {%load static%}
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Internship Form</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link href="https//fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <!-- Template CSS -->
+  <!-- <link rel="stylesheet" href="{%static 'css/style-starter.css'%}"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+
+
+.col-md-6{
+    width:35%;
+    margin-right:135px;
+}
+.card-block{
+    background: #ffffff;
+    /* border-radius: 0; */
+    box-shadow: 1px 0px 10px #b8b3b3;
+}
+.dashboard{
+    border: 1px solid white;
+    background: white;
+    border-radius: 37px;
+    border-width: 10px;
+}
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+.active{
+    background:#F9E79F;
+
+}
+.nav_items .w3-bar-item:hover{
+    background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+
+
+.w3-green, .w3-hover-green:hover{
+  background-color: #FF4433!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #FF4433!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+    background:#FF4433;
+}
+
+ body
+{
+background:transparent;
+}
+ .career-desc{
+      border:1px solid black;
+      border-top:none;
+      height: 400px;
+    }
+    .career-headling{
+      background:#FF4433;
+      color:black;
+      font-weight: 500;
+      font-size:2em;
+      text-align:center;
+      text-transform: capitalize;
+      border:1px solid black;
+    }
+    .hover{
+
+    }
+.hoover:hover{
+    background-color:#FF4433;
+    color:white;
+}
+</style>
+</head>
+<body>
+
+  <div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;" id="mySidebar">
+    <button style="background:#FF4433;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <header class="avatar">
+            <h3 style="margin-left:15%;color:white;">Interns World</h2>
+    		<img class="img_logo" src="/static/images/logo.png" width="30px" />
+  <h4 style="margin-left:15%;color:white;">
+                   {% if request.session.email%}
+                  {{ request.session.first_name}}
+
+
+					  {%endif%}
+
+        </h4>           </header>
+        <br>
+        <br>
+        <div class="nav_items">
+                       <a  href="/userdashboard/"  class="w3-bar-item w3-hover-white" style="background:white;color:black"><i class="fa fa-file-text-o" ></i> Dashboard</a>
+
+
+            <button  class="w3-button w3-block  w3-bar-item w3-hover-white" onclick="myAccFunc()"><i class="fa fa-file-text-o" ></i> Resume <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAcc" class="w3-hide w3-white-w3-card">
+              <a href="/applicationform/" class="w3-bar-item w3-hover-white">Resume Builder</a>
+              <a href="/userresumes" class="w3-bar-item w3-hover-white">View resume</a>
+            </div>
+            <a  href="/user_job/" class="w3-bar-item w3-hover-white" ><i class="fa fa-search" ></i> Jobs</a>
+
+            <a  href="/user_internship/"class="w3-bar-item w3-hover-white"><i class="fa fa-briefcase" ></i> Internship</a>
+            <a  href="/profile/"  class="w3-bar-item w3-hover-white"><i class="fa fa-user" ></i> Profile</a>
+            <a  href="/logout/"  class="w3-bar-item w3-hover-white"><i class="fa fa-sign-out" ></i> Log Out</a>
+        </div>
+
+  </div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <!--    <div class="w3-container" >-->
+    <!--      <h4 style="text-align: right;">{% if request.session.email%}-->
+    <!--                  {{ request.session.email}}-->
+
+    <!--					  {%endif%}</h4>-->
+    <!--    </div>-->
+
+     <div class="w3-black">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+     </div>
+
+        <nav class="navbar navbar-fixed-top navbar-dark  " style="background:white">
+          <div class="container" style="background:white;">
+            <div class="navbar-header">
+
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right" >
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <!--bell-->
+
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+
+                  <span class="glyphicon glyphicon-user" style="color:black; background:white;"></span><b class="caret" style="color:black; background:white"></b></a>
+                  <ul class="dropdown-menu">
+                       <li>
+                      <a href="" title="Profile" style="background:#FF4433;;color:white">{% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'user_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a class="hoover" href="{%url 'user_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'logout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+        <div class="container">
+            <h1 style="text-align:center;"><b>Dashboard</b></h1>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card" style="border-radius:20px;width:100%">
+      <div class="card-block" style="border-radius:20px">
+        <h2 align="center" class="card-title"> Job Posted</h5>
+        <h4 align="center" class="card-text">{{interns}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-block" style="border-radius:20px">
+        <h2 align="center" class="card-title"> Internship Posted</h5></h5>
+        <h4 align="center" class="card-text">{{count}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<div class="container"
+    <div class="row">
+        <div class="col-md-12" style="border :2px solid black">
+           <h2 align="center" style="background:#FF4433 ;">Career Tips</h2>
+           <p style="text-align:justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem IpsumLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
+        </div>
+    </div>
+</div>
+
+<!--<div class="w3-content w3-display-container">-->
+
+<!--<div class="container">-->
+<!--  <div class="row">-->
+<!--    <div class="column-66">-->
+<!--      <h1 class="xlarge-font animate__animated animate__slideInLeft"><b>Get Ahead.</b></h1>-->
+<!--      <h1 class="large-font animate__animated animate__slideInLeft" style="color:MediumSeaGreen;"><b>Get An Internship</b></h1>-->
+<!--      <p class="animate__animated animate__slideInLeft">-->
+<!--          <span style="font-size:36px" >Register Now and apply for a jobs</span></br>-->
+<!--          Create your free profile to get interview invites and jobs that work for you.Your profile is your application. Apply to jobs instantly.Excel with our Jobs Hub. Find tips to get ahead and make your goals a reality.-->
+
+<!--</br>		<span style="font-family: wingdings; font-size: 200%;">-->
+<!--				&#252;</span>-->
+<!--          <span style="font-size:26px">10,000+ Internships with stipend</span>-->
+
+<!--			<br/>-->
+<!--        <span style="font-family: wingdings; font-size:-->
+<!--			 200%;">&#252;</span>-->
+<!--<span style="font-size:26px">100% Trusted Jobs</span></p> </div>-->
+<!-- <div class="column-33">-->
+<!--        <img class="animate__animated animate__slideInRight" src="{%static 'images/n6.jpg'%}" width="335" height="471">-->
+<!--    </div></div>-->
+
+<!--  </div>-->
+<!--</div>-->
+
+<!-- Clarity Section -->
+<!--  <div class="w3-content w3-display-container">-->
+
+<!--<div class="container" style="background-color:#61ccff57;border-radius:30px;">-->
+<!--  <div class="row">-->
+<!--    <div class="column-33">-->
+<!--        <img class="animate__animated animate__slideInLeft" src="{%static 'images/n7.jpg'%}" width="335" height="471">-->
+<!--    </div>-->
+<!--    <div class="column-66">-->
+<!--      <h1 class="xlarge-font animate__animated animate__slideInRight"><b>Resume Builder</b></h1>-->
+<!--      <h1 class="large-font animate__animated animate__slideInRight" style="color:red;"><b>Post Resume</b></h1>-->
+<!--      <p class="animate__animated animate__slideInRight"><span style="font-size:24px">Build a powerful CV</span></br>-->
+<!--		  Register and make resume and explore our career-->
+<!--          opportunities to get the beste the job according-->
+<!--          to your experience . CV according to your-->
+<!--          experience and apply for a good jobs and internship for-->
+<!--          free now. Tell us more about your goals and we'll match you w-->
+<!--          ith the right jobs to help you reach them.-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+
+
+
+<script>
+
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+
+
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+            'transform': 'scale('+scale+')',
+            'position': 'absolute'
+          });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(document).ready(function(){
+      $(".education").hide();
+
+      $(".edu_add1").click(function(){
+          $(".edu1").show();
+      });
+      $(".edu_add2").click(function(){
+          $(".edu2").show();
+      });
+      $(".edu_add3").click(function(){
+          $(".edu3").show();
+      });
+      $(".edu_add4").click(function(){
+          $(".edu4").show();
+      });
+      $(".edu_add5").click(function(){
+          $(".edu5").show();
+      });
+      $(".edu_add6").click(function(){
+          $(".edu6").show();
+      });
+    });
+
+</script>
+
+<!-- left navigation bar -->
+<script>
+  function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
+
+

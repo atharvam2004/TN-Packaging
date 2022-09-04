@@ -1,0 +1,1151 @@
+
+<!doctype html>
+    {%load static%}
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Internship Form</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <link href="https//fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,600;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- Template CSS -->
+  <!-- <link rel="stylesheet" href="{%static 'css/style-starter.css'%}"> -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+                /*custom font*/
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+        @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+        /*basic reset*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            background:lightgrey;
+
+        }
+
+        body {
+            font-family: montserrat, arial, verdana;
+            background: transparent;
+        }
+
+        /*form styles*/
+        #msform {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 80%;
+            margin: 0 10%;
+
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+
+        /*Hide all except first fieldset*/
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        /*inputs*/
+        #msform input, #msform textarea {
+            padding: 1%;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: black;
+            font-size: 13px;
+        }
+         #msform label {
+
+            font-family: montserrat;
+            color: #2C3E50;font-size: 13px;
+
+
+
+        }
+ #msform select {
+            padding: 1%;
+            border: 1px solid #ccc;
+            border-radius: 0px;
+            margin-bottom: 10px;
+            width: 100%;
+            font-family: montserrat;
+            color: #2C3E50;font-size: 13px;
+            /* -webkit-appearance: none !important; */
+
+
+
+        }
+        #msform input:focus, #msform textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #ee0979;
+            outline-width: 0;
+            transition: All 0.5s ease-in;
+            -webkit-transition: All 0.5s ease-in;
+            -moz-transition: All 0.5s ease-in;
+            -o-transition: All 0.5s ease-in;
+        }
+
+        /*buttons*/
+        #msform .action-button {
+            width: 100px;
+            /* background: rgb(255, 107, 0); */
+            background: blue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button:hover, #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+        }
+
+        #msform .action-button-previous {
+            width: 100px;
+            /* background: #C5C5F1; */
+            background: blue;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px ;
+        }
+
+        /*headings*/
+        .fs-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+
+        }
+
+        .fs-subtitle {
+            font-weight: normal;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        #msform .info{
+          text-align: left;
+          color: black;
+        }
+        #msform .form_dropdown{
+          padding:8px;
+        }
+        #msform .form_checkbox {
+
+          text-align: left;
+        }
+        #msform  .cb{
+          width: 6%;
+        }
+        #msform  .name{
+          margin: 0%;
+        }
+        #msform  .details_text{
+          padding:5px;
+        }
+        #msform  .skills{
+          padding:2%;
+          border-radius: 10%;
+          background-color: white;
+          margin: 3%;
+          font-weight: 500;
+        }
+        #msform  .edu_add_btn{
+          font-family: 'Poppins', sans-serif;
+          color: black;
+          text-align: left;
+          width: 40%;
+          background-color: white;
+          border: 0px;
+          font-size: 15px;
+        }
+        #msform  .sub_info{
+          text-align: left;
+          font-size: 9px;
+          color: grey;
+        }
+
+
+
+
+        /*progressbar*/
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            /*CSS counters to number the steps*/
+            counter-reset: step;
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 9px;
+            width: 16.66%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        #progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 24px;
+            height: 24px;
+            line-height: 26px;
+            display: block;
+            font-size: 12px;
+            color: #333;
+            background: white;
+            border-radius: 25px;
+            margin: 0 auto 10px auto;
+        }
+
+        /*progressbar connectors*/
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: -50%;
+            top: 9px;
+            z-index: -1; /*put it behind the numbers*/
+        }
+
+        #progressbar li:first-child:after {
+            /*connector not needed before the first step*/
+            content: none;
+        }
+
+        /*marking active/completed steps green*/
+        /*The number of the step and the connector before it = green*/
+        #progressbar li.active:before, #progressbar li.active:after {
+            /* background: #ee0979; */
+            background: #FF4500;
+            color: white;
+        }
+
+
+        /* Not relevant to this form */
+        .dme_link {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .dme_link a {
+            background: #FFF;
+            font-weight: bold;
+            color: #ee0979;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 5px 25px;
+            font-size: 12px;
+        }
+
+        .dme_link a:hover, .dme_link a:focus {
+            background: #C5C5F1;
+            text-decoration: none;
+        }
+         .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+.nav_items .w3-bar-item{
+  /* text-align: center; */
+}
+.w3-green, .w3-hover-green:hover{
+  background-color: blue!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: blue!important;
+}
+    /*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+ body
+{
+background:transparent;
+}.dashboard{
+    border: 1px solid white;
+    background: white;
+    border-radius: 37px;
+    border-width: 10px;
+}
+.avatar{
+
+  margin-top:40%;
+}
+.img_logo{
+  margin-left:15%;
+  width:50%;
+  border-radius:80%;
+}
+
+.nav_items .w3-bar-item{
+   color:white;
+
+}
+
+.nav_items .w3-bar-item:hover{
+    background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+.w3-button:hover{
+   background:#F9E79F;
+    color:#000000;
+ text-decoration:none;
+}
+
+
+.w3-green, .w3-hover-green:hover{
+  background-color: #008080!important;
+}
+.w3-teal, .w3-hover-teal:hover {
+    background-color: #008080!important;
+}* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 64px;
+}
+
+/* Clear floats */
+.row:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+/* 2/3 column */
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+/* 1/3 column */
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+/* Add responsiveness - make the columns appear on top of each other instead of next to each other on small screens */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.top-content{
+    padding-top:5%;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+    background:#FF4433;
+}
+
+ body
+{
+background:transparent;
+}
+ .career-desc{
+      border:1px solid black;
+      border-top:none;
+      height: 400px;
+    }
+    .career-headling{
+      background:#FF4433;
+      color:black;
+      font-weight: 500;
+      font-size:2em;
+      text-align:center;
+      text-transform: capitalize;
+      border:1px solid black;
+    }
+    .hover{
+
+    }
+.hoover:hover{
+    background-color:#FF4433;
+    color:white;
+}
+
+/*top horizontal navigation bar*/
+.navbar {
+    z-index:1!important;
+}
+.navbar .container{
+    background-color:black;
+    margin:0px;
+    padding:1%;
+
+    width:100%;
+}
+.navbar-profile ul.nav > li > a {
+  color: #777;
+  padding-top:0px ;
+  padding-bottom: 0px;
+  line-height: 20px;
+}
+
+.navbar-profile ul.nav > li .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+
+@media (max-width: 767px) {
+  .navbar-profile {
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    right: 5%;
+    top: 30%;
+    text-align: center;
+    margin: auto;
+
+  }
+
+}
+@media (max-width: 990px) {
+    .container{
+        height:53px;
+    }
+    .top-content{
+    padding-top:15%;
+    }
+}
+
+.w3-black{
+    width:40%;
+    z-index:5!important;
+    position:fixed;
+}
+.w3-sidebar{
+    z-index:10!important;
+}
+
+ body
+{
+background:transparent;
+}
+
+
+</style>
+</head>
+<body>
+<div class="w3-sidebar w3-bar-block w3-collapse w3-card w3-animate-left " style="width:200px;" id="mySidebar">
+    <button style="background:#FF4433;" class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">Close &times;</button>
+        <header class="avatar">
+            <h3 style="margin-left:15%;color:white;">Interns World</h2>
+    		<img class="img_logo" src="/static/images/logo.png" width="30px" />
+  <h4 style="margin-left:15%;color:white;">
+                   {% if request.session.email%}
+                  {{ request.session.first_name}}
+
+
+					  {%endif%}
+
+        </h4>           </header>
+        <br>
+        <br>
+        <div class="nav_items">
+                       <a  href="/userdashboard/"  class="w3-bar-item w3-hover-white" ><i class="fa fa-file-text-o" ></i> Dashboard</a>
+
+
+            <button  class="w3-button w3-block  w3-bar-item w3-hover-white" onclick="myAccFunc()"><i class="fa fa-file-text-o" ></i> Resume <i class="fa fa-caret-down"></i>
+            </button>
+            <div id="demoAcc" class="w3-hide w3-white-w3-card">
+              <a href="/applicationform/" class="w3-bar-item w3-hover-white">Make resume</a>
+              <a href="/userresumes" class="w3-bar-item w3-hover-white">View resume</a>
+            </div>
+            <a  href="/user_job/" class="w3-bar-item w3-hover-white" style="background:white;color:black"><i class="fa fa-search" ></i> Jobs</a>
+
+            <a  href="/user_internship/"class="w3-bar-item w3-hover-white"><i class="fa fa-briefcase" ></i> Internship</a>
+            <a  href="/profile/"  class="w3-bar-item w3-hover-white"><i class="fa fa-user" ></i> Profile</a>
+            <a  href="/logout/"  class="w3-bar-item w3-hover-white"><i class="fa fa-sign-out" ></i> Log Out</a>
+        </div>
+
+  </div>
+
+<div class="w3-main" style="margin-left:200px">
+
+    <!--    <div class="w3-container" >-->
+    <!--      <h4 style="text-align: right;">{% if request.session.email%}-->
+    <!--                  {{ request.session.email}}-->
+
+    <!--					  {%endif%}</h4>-->
+    <!--    </div>-->
+
+     <div class="w3-black">
+        <button class="w3-button w3-teal w3-xlarge w3-hide-large" onclick="w3_open()">&#9776;</button>
+     </div>
+
+        <nav class="navbar navbar-fixed-top navbar-dark  " style="background:white">
+          <div class="container" style="background:white;">
+            <div class="navbar-header">
+
+            </div>
+
+            <div class="nav navbar-header navbar-profile  pull-right"  style="background:transparent">
+              <ul class="nav">
+
+                <li class="dropdown ">
+                  <!--bell-->
+
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+
+                  <span class="glyphicon glyphicon-user" style="color:black; background:white;"></span><b class="caret" style="color:black; background:white"></b></a>
+                  <ul class="dropdown-menu">
+                       <li>
+                      <a href="" title="Profile" style="background:#FF4433;;color:white">{% if request.session.email%}
+                  {{ request.session.email}}
+
+					  {%endif%}</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'user_profile_update'%}" title="Profile"><span class="glyphicon glyphicon-user"></span>Edit Profile</a>
+                    </li>
+                     <li>
+                      <a class="hoover" href="{%url 'user_change_password'%}" title="Change_password"><span class="glyphicon glyphicon-eye-close"></span> Change Password</a>
+                    </li>
+                    <li>
+                      <a class="hoover" href="{%url 'logout'%}" title="Logout"><span class="glyphicon glyphicon-log-out"></span> Logout </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+
+
+
+
+
+<div class="container" style="margin-left:40px">
+
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+ <form id="msform"  enctype="multipart/form-data" method="POST" action="{% url 'form_apply'%}">
+            {% csrf_token %}
+                     <ul id="progressbar" style="margin-top:80px">
+                <li class="active" >Preferences</li>
+                <li >Personal Details</li>
+                <li>Education</li>
+                <li>Experience</li>
+                <li>Skills</li>
+                <li>Work Samples</li>
+            </ul>
+
+            <!-- fieldsets -->
+{% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+
+
+    {% for data in intern_details %}
+            <fieldset>
+                  <h4 class="p-3 mb-2  text-white" style="background:#FF4500;color:white"><i class=" fa fa-tick"></i>
+
+
+        Now You can edit your details And Apply For Jobs.</h4>
+
+                <h3 class="fs-title">Company Details</h3><br>
+                  <p class="info">Company Name</p>
+                <input value="{{data.company_name}}" required type="text" name="company_name" placeholder="Company Name"  />
+
+                <p class="info"> Email Adress</p>
+
+                <input value="{{data.email_address}}" required type="text" name="company_email" placeholder="Email Address"  />
+<p class="info"> Field In which You apply</p>
+                <input value="{{data.job_title}}" required type="text" name="field" placeholder="(Digital Marketing/Development/Developer)Any Other" />
+{% endfor %}
+
+
+
+
+
+
+
+                <input type="button" style="background:#FF4500" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+{% for data in all_data%}
+            <fieldset>
+                <h3 class="fs-title">Personal details</h3><br>
+                <!-- <h3 class="fs-subtitle">Write About Your Education</h3> -->
+                <div class="row">
+
+                    <div class="name col-md-6 col-md-offset-5">
+                      <p class="info"> First name</p>
+                      <input value="{{data.fname}}" type="text" class="details_text" name="fname" required />
+                    </div>
+                    <div class="name col-md-6 col-md-offset-5">
+                      <p class="info"> Last name</p>
+                      <input value="{{data.lname}}" type="text" class="details_text" name="lname" required />
+                    </div>
+                </div>
+                <p class="info"> Email Address</p>
+                <p style="font-size:10px" class="sub_info">&#9432;
+                    Use Same Email That you used During SignUp..</p>
+
+                <input value="{{data.email}}" type="email" name="email" />
+                <p class="info"> Phone Number</p>
+                <div class="row">
+                    <div class=" name col-md-2 col-md-offset-2">
+                      <input type="text" class="details_text" name="code" placeholder="+91"/>
+                    </div>
+                    <div class="name col-md-10 col-md-offset-10">
+                      <input value="{{data.phone}}" type="text"class="details_text"  name="phone"  placeholder=" "/>
+                    </div>
+                </div>
+                <p class="info"> Current city</p>
+                <input value="{{data.city}}" type="text" name="city" />
+                <p class="info"> Home town</p>
+                <input value="{{data.hometown}}" type="text" name="hometown"/>
+
+                <input type="button" style="background:black;color:white" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" style="background:#FF4500" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+
+            <fieldset>
+                <h3 class="fs-title">Education</h3><br>
+
+
+<input type="button" class="edu_add3" name="secondaryclass" value="+ Add Secondary details (X)"/>
+                    <div class="education edu3">
+                        <input type="text" name="secondary_class " value="{{data.secondary_class}}" placeholder="Name of Board/ School"/>
+              <input type="text" name="secondary_year" value="{{data.secondary_year}}" placeholder="Year of passing"/>
+                        <input type="text" name="secondary_percentage" value="{{data.secondary_percentage}}" placeholder="Percentage/CGPA"/>
+
+                    </div>
+                <br>
+                  <input type="button" class="edu_add2" name="senior_secondary" value="+ Add Senior Secondary details (XII)"/>
+                    <div class="education edu2">
+                                            <input value="{{data.seniorsecondary}} " type="text" name="seniorsecondary " placeholder="Name of Board/ School"/>
+<input type="text" name="seniorsecondary_year " value="{{data.seniorsecondary_year}} " placeholder="Year of passing"/>
+                        <input type="text" value=" {{data.seniorsecondary_percentage}}" name="seniorsecondary_percentage " placeholder="Percentage/CGPA"/>
+</div>
+                <br>
+  <input type="button" class="edu_add5" name="Diplomas" value="+ Add  Diploma details"/>
+                    <div class="education edu5">
+                      <input type="text" value=" {{data.Diploma_field}}" name="Diploma_field " placeholder="Degree"/>
+                        <input type="text" value="{{data.Diploma_college}} " name=" Diploma_college" placeholder="Name of College/ University"/>
+<input type="text" name="Diploma_year " value=" {{data.Diploma_year}}" placeholder="Year of passing"/>
+                        <input type="text" value=" {{data.Diploma_percentage}}" name="Diploma_percentage " placeholder="Percentage"/> </div>
+
+                <br>
+                     <input type="button" class="edu_add1" name="graduation1" value="+ Add graduation details"/>
+                    <div class="education edu1">
+                        <input type="text" value=" {{data.graduation_field}}" name=" graduation_field" placeholder="Degree"/>
+                        <input type="text" value=" {{data.graduation_college}}" name="graduation_college " placeholder="Name of College/ University"/>
+                        <input type="text" value="{{data.graduation_year}} " name="graduation_year" placeholder="Year of passing"/>
+                        <input type="text" value="{{data.grad_percentage}} " name="grad_percentage" placeholder="Percentage"/>
+                    </div>
+                <br>
+
+                  <input type="button" class="edu_add4" name="post_graduation" value="+ Add Post graduation details"/>
+                    <div class="education edu4">
+                         <input type="text" value="{{data.post_graduation_field}} " name=" post_graduation_field" placeholder="Degree"/>
+                        <input type="text" value="{{data.post_graduation_college}}" name=" post_graduation_college" placeholder="Name of College/ University"/>
+<input type="text" name=" post_graduation_year" value=" {{data.post_graduation_year}}" placeholder="Year of passing"/>
+                        <input type="text" value=" {{data.post_graduation_percentage}}" name=" post_graduation_percentage" placeholder="Percentage"/></div>
+                <br>
+
+
+
+                  <input type="button"class="edu_add6" name="Phd" value="+ Add PHD details"/>
+                    <div class="education edu6">
+                          <input type="text" value=" {{data.Phd_field}}" name="  Phd_field" placeholder="Degree"/>
+                        <input type="text" value="{{data.Phd_college}} " name=" Phd_college " placeholder="Name of College/ University"/>
+<input type="text" name=" Phd_year " value="{{data.Phd_year}} " placeholder="Year of passing"/>
+                        <input type="text" value="{{data.Phd_percentage}} " name=" Phd_percentage " placeholder="Percentage"/>   </div>
+
+
+                     <br>
+                <input type="button" style="background:black;color:white" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" style="background:#FF4500" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h3 class="fs-title">Experience</h3><br>
+
+
+                <input type="button"class="job_add1" name=" " value="+ Add Job details"/>
+                    <div class="experience job_details ">
+                        <input type="text" value="{{data.Job_company_name}} " name="Job_company_name " placeholder="Name of the company"/>
+
+                        <input type="text" value="{{data.Job_location}} " name="Job_location " placeholder="Location"/>
+                        <input type="text" value="{{data.Job_designation}}" name="Job_designation " placeholder="Designation"/>
+                        <input type="text" value="{{data.Job_joining_date}} " name=" Job_joining_date" placeholder="Joining Date"  />
+                        <input type="text" value="{{data.Job_relieving_date}} " name="Job_relieving_date " placeholder="Relieving Date"  />
+                    </div>
+
+                <input type="button"class="internship_add1" name=" " value="+ Add Internship details"/>
+                    <div class="experience internship_details">
+                        <input type="text" value=" {{data.Internships_company_name}}" name="Internships_company_name " placeholder="Name of the company"/>
+ <input type="text" name="Internships_location " value="{{data.Internships_location}} "  placeholder="Location"/>
+                        <input type="text" value=" {{data.Internship_designation}}" name="Internship_designation" placeholder="Designation"/>
+                        <input type="text"  value=" {{data.Internships_joining_date}}" name=" Internships_joining_date" placeholder="Joining Date"  />
+                        <input type="text" value=" {{data.Internships_relieving_date}}" name="Internships_relieving_date " placeholder="Relieving Date"  />
+                </div>
+
+                <input type="button"class="responsibility_add1" name=" " value="+ Add Positions of Responsibility"/>
+                    <div class="experience responsibility_details">
+                        <p class="sub_info">&#9432; If you have been/are active part of societies, conducted any events or led a team, add details here.</p>
+                        <input type="text" value=" {{data.Positions_Responsibility}}" name="Positions_Responsibility" placeholder="Details"/>
+
+                    </div>
+
+                <!--<p class="info"> Positions of Responsibility</p>-->
+                <!--<p class="sub_info">&#9432; If you have been/are active part of societies, conducted any events or led a team, add details here.</p>-->
+                <!--<input type="text" name="Positions_Responsibility" />-->
+                <!--<p class="info"> Training / courses</p>-->
+                <!--<p class="sub_info">&#9432; Add online or offline training/courses here.</p>-->
+
+                <input type="button"class="training_add1" name=" " value="+ Add Training/courses details "/>
+                    <div class="experience training_details">
+                        <p class="sub_info">&#9432; Add online or offline training/courses here.</p>
+                        <input type="text" value="{{data.trainings_field}} " name=" trainings_field" placeholder="Training/courses details"/>
+                        <input type="text" value="{{data.trainings_location}} "  name=" trainings_location" placeholder="Location"/>
+                         <input type="text" value="{{data.trainings_joining_date}} " name="trainings_joining_date " placeholder="Start Date"  />
+                        <input type="text" value=" {{data.trainings_relieving_date}}" name="trainings_relieving_date " placeholder="End Date"  />
+                    </div>
+
+                <input type="button"class="project_add1" name=" " value="+ Add Academic/personal projects "/>
+                    <div class="experience project_details">
+                        <input type="text" value=" {{data.personal_projects_topi}}" name=" personal_projects_topic" placeholder="Title of the project"/>
+                        <input type="text" value="{{data.personal_projects_description}} " name="personal_projects_description " placeholder="Project description"/>
+                    </div>
+
+
+
+
+
+                <input type="button" style="background:black;color:white"  name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" style="background:#FF4500" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h3 class="fs-title">Skills</h3><br>
+                <!-- <h3 class="fs-subtitle">Write About Your Education</h3> -->
+                <p class="info"> Choose from relevant skills below</p>
+                <button class="skills">Python</button>
+                <button class="skills">Java</button><br>
+                <button class="skills">C++</button>
+                <button class="skills">C#</button>
+
+                <p class="info"> Add skills</p>
+                <input type="text" value=" {{data.skills}}" name="skills" />
+
+                <input type="button" style="background:black;color:white" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="button" style="background:#FF4500" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+
+            <fieldset>
+                <h3 class="fs-title"> Work Samples</h3> <br>
+                <p class="info"> Blog link</p>
+                <input type="text" value=" {{data.blog_link}}" name="blog_link" />
+                <p class="info"> GitHub Profile</p>
+                <input type="text" value=" {{data.gitHub_profile}}" name="gitHub_profile" />
+                <p class="info"> Play Store Developer A/c (public link)</p>
+                <input type="text" value="{{data.play_store_link}} " name="play_store_link" />
+                <p class="info"> Behance Portfolio link</p>
+                <input type="text" value=" {{data.behance_portfolio}}" name="behance_portfolio" />
+                <p class="info"> Other Work sample link</p>
+                <p class="sub_info">&#9432; Your work sample could be in the form of social media posts, presentations, documents, websites etc.
+                If you have multiple work samples, upload them to google drive and add the Link here.</p>
+                <input type="text" value=" {{data.other_work_sample}}" name="other_work_sample" /><br> <br>
+
+
+
+                <input type="button" style="background:black;color:white" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input type="submit" style="background:#FF4500" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>  {%endfor%}  </div>
+</div>
+<script>
+
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+
+
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+            'transform': 'scale('+scale+')',
+            'position': 'absolute'
+          });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(document).ready(function(){
+        // education page details
+      $(".education").hide();
+      $(".experience").hide();
+
+
+
+      $(".edu_add1").click(function(){
+             $(".edu1").toggle()
+      });
+
+      $(".edu_add2").click(function(){
+          $(".edu2").toggle();
+      });
+      $(".edu_add3").click(function(){
+          $(".edu3").toggle();
+      });
+      $(".edu_add4").click(function(){
+          $(".edu4").toggle();
+      });
+      $(".edu_add5").click(function(){
+          $(".edu5").toggle();
+      });
+      $(".edu_add6").click(function(){
+          $(".edu6").toggle();
+      });
+
+     // experience page details
+       $(".job_add1").click(function(){
+          $(".job_details").toggle();
+      });
+       $(".internship_add1").click(function(){
+          $(".internship_details").toggle();
+      });
+
+       $(".responsibility_add1").click(function(){
+          $(".responsibility_details").toggle();
+      });
+       $(".training_add1").click(function(){
+          $(".training_details").toggle();
+      });
+      $(".project_add1").click(function(){
+          $(".project_details").toggle();
+      });
+
+    //   to add calendar for dates
+      $("#date1").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+      $("#date2").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+      $("#date3").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+      $("#date4").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+       $("#date5").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+       $("#date6").focus( function() {
+        $(this).attr({type: 'date'});
+      });
+
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+<!-- left navigation bar -->
+<script>
+  function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+    x.previousElementSibling.className += " w3-green";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+    x.previousElementSibling.className =
+    x.previousElementSibling.className.replace(" w3-green", "");
+  }
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+
+
+
+</body>
+</html>
+
+
+

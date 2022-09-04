@@ -1,0 +1,86 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Add Jobs
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+    <h3 class="animate__animated animate__zoomIn" align="center" style="margin-top:30px">Hire the best freshers
+faster</h3>
+
+
+    <div class="form-style-3" >
+<form method="POST" >
+{% if messages %}
+  <div id='hideMe'>>
+    {% for message in messages %}
+
+    <p class="p-2 mb-2 bg-success text-white hideMe" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+  </div>
+              {% endif %}
+
+{% csrf_token %}
+<fieldset style="background:white;" ><legend style="color: white;
+    background: #FF4433;">POST YOUR JOBS</legend>
+
+    <label style="color: #5E8C88"><span>Company Name<span class="required">*</span></span>
+    <input style="border-radius:30px " type="text" placeholder="Company Name" class="input-field" name="company_name" required /></label>
+
+    <label style="color: #5E8C88"><span>Email <span class="required">*</span></span>
+    <input style="border-radius:30px " type="email" placeholder="Use Same Email Address That You Used  During Signup" class="input-field" name="email_address" required /></label>
+
+<label style="color: #5E8C88"><span>Job Type <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" placeholder="Full Time Job/Part Time Job" class="input-field" name="job_type" required /></label>
+<label style="color: #5E8C88"><span>Job Title <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" placeholder="Ex:Developer/Designer Etc"  class="input-field" name="job_title" required  /></label>
+<label style="color: #5E8C88" ><span>Required Skill <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" placeholder="Skills"  class="input-field" name="required_skill"  required /></label>
+<label style="color: #5E8C88"><span> Experience Requirements <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" class="input-field"placeholder="Experience"  required name="experience_requirements" value="" /></label>
+<label style="color: #5E8C88"><span>Job Description <span class="required">*</span></span>
+             <textarea style="border-radius:30px " name="job_description" class="textarea-field" placeholder="Description"  required></textarea></label>
+<label style="color: #5E8C88"><span>Responsibilities <span class="required">*</span></span>
+             <input style="border-radius:30px " type="text" class="input-field" required name="responsibilities" placeholder="Responsibilities"  /></label>
+<label style="color: #5E8C88"><span>Work Mode <span class="required">*</span></span>
+             <input type="text" style="border-radius:30px " class="input-field" required name="work_mode"  placeholder="Ex:In office/Online/Work From Home" /></label>
+<label style="color: #5E8C88"><span>About Company <span class="required">*</span></span>
+<textarea style="border-radius:30px " placeholder="About Company" name="about_company" required class="textarea-field"></textarea></label>
+<!--------------------------------------------->
+ <label style="color: #5E8C88"><span>Location <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="location" placeholder="Location"  /></label>
+
+<label style="color: #5E8C88"><span>No Of Positions <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="no_of_positions" placeholder="Number Of positions"   /></label>
+<label style="color: #5E8C88"><span>Stipend <span class="required">*</span></span><input type="text" style="border-radius:30px " placeholder="Stipend" class="input-field" required name="stipend"  /></label>
+<label style="color: #5E8C88"><span>Appliaction Deadline <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="application_deadline" placeholder="Application Deadline"  /></label>
+
+<label style="color: #5E8C88"><span>Required Qualification <span class="required">*</span></span><textarea style="border-radius:30px " name="required_qualification" placeholder="Qualification" required class="textarea-field"></textarea></label>
+<label style="text-align:center"><span> </span><input style="border-radius:30px;color:white;background: #FF4433;" type="submit" value="Submit" /></label>
+
+<!--</fieldset>-->
+<!--    <fieldset style="background:#ffdd99;"><legend></legend>-->
+<!--        <label style="color: #5E8C88"><span>Location <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="location" placeholder="Location"  /></label>-->
+
+<!--<label style="color: #5E8C88"><span>No Of Positions <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="no_of_positions" placeholder="Number Of positions"   /></label>-->
+<!--<label style="color: #5E8C88"><span>Stipend <span class="required">*</span></span><input type="text" style="border-radius:30px " placeholder="Stipend" class="input-field" required name="stipend"  /></label>-->
+<!--<label style="color: #5E8C88"><span>Appliaction Deadline <span class="required">*</span></span><input style="border-radius:30px " type="text" class="input-field" required name="application_deadline" placeholder="Application Deadline"  /></label>-->
+
+<!--<label style="color: #5E8C88"><span>Required Qualification <span class="required">*</span></span><textarea style="border-radius:30px " name="required_qualification" placeholder="Qualification" required class="textarea-field"></textarea></label>-->
+<!--<label style="text-align:center"><span> </span><input style="border-radius:30px;color:#ffdd99;-->
+<!--  background: #5E8C88;" type="submit" value="Submit" /></label>-->
+</fieldset>
+</form>
+</div>
+</div>
+
+
+  <!-- //script for testimonials -->
+
+    </div>
+</div>
+
+{%endblock%}

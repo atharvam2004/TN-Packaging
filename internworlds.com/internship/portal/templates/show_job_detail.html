@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta name="title" content="Internship | Internships in Pune – InternWorlds">
+<meta name="description" content="InternWorlds is an online portal that provides the best internship opportunities in India. Such as Summer Internships, Virtual Internships, Paid Internships, and many more.">
+<meta name="keywords" content="Internship, Internships, Internship in India, summer internship, paid internship, Digital Marketing Course in India,  virtual Internships, MBA Internships, Office Internships, Internship in pune, Internship in Mumbai, Learn Digital Marketing Course in India, Online Courses, Internship Opportunities in India">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content=" eSparse Matrix Solutions Pvt. Ltd.">
+    <title>Intern Worlds</title>
+    <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, user-scalable=no", initial-scale=1, shrink-to-fit=no"><title>Internal Port@L</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+
+      <script src="https://kit.fontawesome.com/a6e2755b4d.js" crossorigin="anonymous">
+        </script>
+    <link rel="stylesheet" href="{%static 'css/style-starter.css'%}">
+</head>
+<style>
+#two {
+  background-color: orange;
+  overflow:hidden;
+  margin:10px;
+  border:2px solid #ccc;
+  min-height:170px;
+}
+
+@media screen and (max-width: 400px) {
+   #one {
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;
+  }
+}
+@media screen and (max-width: 700px) {
+   #two {
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;
+  }
+}.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  font-weight: 400;
+}
+.container1 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-auto-rows: 300px;
+  grid-gap: 30px;
+  margin: auto ;
+  text-align:center
+}
+
+@media (max-width: 767.98px) {
+  .container1 {
+    width: 540px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .container1 {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container1 {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px)
+{
+  .container1 {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px)
+{
+  .container1 {
+    width: 1140px;
+  }
+}
+
+.container1 .box {
+  position: relative;
+  height: 70%;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.container1 .box .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.container1 .box:hover .icon {
+  top: 20px;
+  left: calc(50% - 40px);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.container1 .box .icon .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 80px;
+  transition: 0.5x;
+  color: #fff;
+}
+
+.container1 .box:hover .icon .fa {
+  font-size: 40px;
+}
+
+.container1 .box .content {
+  position: absolute;
+  top: 100%;
+  height: calc(100% - 100px);
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.container1 .box:hover .content {
+  top: 100px;
+}
+
+.container1 .box .content h3 {
+  margin: 0 0 10px;
+  padding: 0;
+  color: #fff;
+  font-size: 24px;
+}
+
+.container1 .box .content p {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 16px;
+}
+
+.container1 .box:nth-child(1) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(1) {
+  background-color: black;
+}
+
+.container1 .box:nth-child(2) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(2) {
+  background-color: black;
+}
+
+.container1 .box:nth-child(3) .icon {
+  background-color: grey;
+}
+
+.container1 .box:nth-child(3) {
+  background-color: black;
+}
+
+.counter {
+    background-color:#f5f5f5;
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.count-title {
+    font-size: 40px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.count-text {
+    font-size: 13px;
+    font-weight: normal;
+    margin-top: 10px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fa-2x {
+    margin: 0 auto;
+    float: none;
+    display: table;
+    color: #4ad1e5;
+}ul {
+    margin: 0px;
+    padding: 0px;
+}
+.footer-section {
+  background: #151414;
+  position: relative;
+}
+.footer-cta {
+  border-bottom: 1px solid #373636;
+}
+.single-cta i {
+  color: #ff5e14;
+  font-size: 30px;
+  float: left;
+  margin-top: 8px;
+}
+.cta-text {
+  padding-left: 15px;
+  display: inline-block;
+}
+.cta-text h4 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.cta-text span {
+  color: #757575;
+  font-size: 15px;
+}
+.footer-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-pattern img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 330px;
+  background-size: cover;
+  background-position: 100% 100%;
+}
+.footer-logo {
+  margin-bottom: 30px;
+}
+.footer-logo img {
+    max-width: 200px;
+}
+.footer-text p {
+  margin-bottom: 14px;
+  font-size: 14px;
+      color: #7e7e7e;
+  line-height: 28px;
+}
+.footer-social-icon span {
+  color: #fff;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 20px;
+}
+.footer-social-icon a {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+.footer-social-icon i {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+}
+.facebook-bg{
+  background: #3B5998;
+}
+.twitter-bg{
+  background: #55ACEE;
+}
+.google-bg{
+  background: #DD4B39;
+}
+.footer-widget-heading h3 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  position: relative;
+}
+.footer-widget-heading h3::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  height: 2px;
+  width: 50px;
+  background: #ff5e14;
+}
+.footer-widget ul li {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  margin-bottom: 12px;
+}
+.footer-widget ul li a:hover{
+  color: #ff5e14;
+}
+.footer-widget ul li a {
+  color: #878787;
+  text-transform: capitalize;
+}
+.subscribe-form {
+  position: relative;
+  overflow: hidden;
+}
+.subscribe-form input {
+  width: 100%;
+  padding: 14px 28px;
+  background: #2E2E2E;
+  border: 1px solid #2E2E2E;
+  color: #fff;
+}
+.subscribe-form button {
+    position: absolute;
+    right: 0;
+    background: #ff5e14;
+    padding: 13px 20px;
+    border: 1px solid #ff5e14;
+    top: 0;
+}
+.subscribe-form button i {
+  color: #fff;
+  font-size: 22px;
+  transform: rotate(-6deg);
+}
+.copyright-area{
+  background: #202020;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}.fa-youtube {
+  background: #bb0000;
+  color: white;
+}.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}.fa-instagram {
+  background: #125688;
+  color: white;
+}.navbar-nav > li{
+  padding-left:10px;
+}form { display: inline;
+ margin-left:20px;
+ }
+#left {
+  float: left;
+  width: 65%;
+  overflow: hidden;
+}
+
+#right {
+  overflow: hidden;
+}
+
+
+.fab{
+    margin-bottom: 5px;
+}
+.nav-link:hover, .fab:hover, .grow:hover{
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.navbar-brand{
+    width:80px;
+}
+
+</style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top "
+     style="background-color: white">
+  <a class="navbar-brand mx-left" href="{%url 'index'%}">
+      <img src="{%static 'images/esparse.jpg'%}" style="border-radius:20px;" width=80% ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto" id="menulist" >
+<li class="nav-item active">
+        <a class="nav-link  w3-button" style="color:black" href="{%url 'index'%}" >Home </a>
+      </li>
+      
+           <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'show_internship'%}">Internship<span class="sr-only">(current)</span>
+        </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'job'%}">Jobs<span class="sr-only">(current)</span></a>
+      </li>
+
+
+
+        <li class="nav-item active">
+        <a class="nav-link"style="color:black"  href="{%url 'blog_page'%}">Blog
+            <span class="sr-only">(current)</span></a>
+      </li>
+           <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'associate'%}">Associate
+            <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link  w3-button" style="color:black" href="{%url 'makeresume'%}" >Resume Builder</a>
+      </li>
+    </ul>
+     <ul class="nav navbar-nav mx-right">
+              <div class="dropdown" >
+  <button  style="border-radius:15px;background:#FF4500;font-style:bold;
+  color: white" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <b>Login</b>
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{%url 'login'%}">User</a>
+    <a class="dropdown-item" href="{%url 'companylogin'%}">Company</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+          </ul>
+  </div>
+</nav>
+
+
+
+<br/>
+<br/>
+<br/>
+{% if messages %}
+              <ul >
+    {% for message in messages %}
+    <li class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</li>
+    {% endfor %}
+              </ul>
+              {% endif %}
+<br/>
+<div class="row" style="margin-left:40px;margin-right:40px">
+    <div class="col-md-12" >
+    {% for item in all_detail %}
+
+<div class="row">
+<div class="col-md-6">
+    <h3 style="color:black">
+            {{ item.job_title }}</h3>
+        <h6 style="color:#5E8C88">
+            {{ item.company_name }}</h6>
+
+        <h6 style="color:#5E8C88">
+            {{ item.location }}</h6>
+</div>
+<div class="col-md-5" align=right >
+<th width="120px"><img src="{%static 'images/logo.png'%}" width=80px height=60px style="border-radius:50px;margin-top:40px"></th>
+
+
+</div>
+</div>
+<p style="color:black;margin-left:20px ">{{item.job_type}} &nbsp;
+<img src="{%static 'images/new2.gif'%}" alt="" height="25px">&nbsp;
+Deadline:-{{ item.application_deadline }}</p>
+
+
+<p>
+
+
+        <hr>
+        <h4>Job Details</h4>
+
+        <b style="color:#5E8C88">Roles and Responsibilities:</b>
+        {{ item.responsibilities}}<br/>
+         <b style="color:#5E8C88">Experience Required:</b>
+        {{ item.experience_requirements}}<br/>
+         <b style="color:#5E8C88">Education:</b>
+        {{ item.required_qualification}}<br/>
+        <b style="color:#5E8C88">Salary:</b>
+        {{ item.stipend}}<br/>
+        <hr/>
+        <b style="color:#5E8C88"> Work Mode:</b>
+        {{ item.work_mode}}<br/>
+       <b style="color:#5E8C88">No of Positions:</b>
+        {{ item.no_of_positions}}<br/>
+         <b style="color:#5E8C88">Skill Required:</b>
+        {{ item.required_skill}}<br/>
+         <b style="color:#5E8C88">Application Deadline:</b>
+        {{ item.application_deadline}}<br/>
+
+ <hr>       <h4>Job Describtion:</h4><br/>
+        {{ item.job_description}}</b><br/>
+<hr>
+<h4 > About Company</h4>
+
+         <p align="justify" >{{ item.about_company}}</p><br/>
+
+        <p align="center"> <a  href="{% url 'login' %}"><button type="button" style="background:#FF4500;color:white;border-radius:10px" class="btn">Apply Now</button>
+</a></p>
+
+
+    </div>
+
+
+
+    </div>
+{%endfor%}
+
+</div>
+
+<br/>
+<br/>
+
+
+<br/>
+
+
+
+
+<!-------------------------------------------------------->
+<footer class="footer-section"  style="background-color:black">
+        <div class="container">
+
+            <div class="footer-content pt-5 pb-5">
+                <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ff4500">About Internsworld</h3>
+                            </div>
+<div class="footer-text">
+                               
+    <p align="justify">
+
+        <a style="color:white"  href="{%url 'about'%}">About US</a>
+                                </p>
+                                 <p align="justify">
+
+                                    <a style="color:white"  href="{%url 'contact'%}">Contact Us</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white"  href="{%url 'blog_page'%}">Blog</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white"  href="{%url 'associate'%}">Associate With Us</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white"  href="{%url 'our_team'%}">Our Team</a>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ff4500">About Associates</h3>
+                            </div>
+<div class="footer-text">
+                                <p align="justify">
+
+                                    <a style="color:white;" href="{%url 'companylogin'%}"> Post Jobs</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "href="{%url 'companylogin'%}">Post Internship</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="{%url 'associate'%}">Join Associate</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="{%url 'associate'%}">Associate Joining Process</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="{%url 'associate'%}">We Support Startups</a>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+ <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                <h3 style="color:#ff4500">About Internship</h3>
+                            </div>
+<div class="footer-text">
+                                <p align="justify">
+
+                                    <a style="color:white;" href="{%url 'show_internship'%}"> Find Internship</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "href="{%url 'show_internship'%}">Sign for Internship</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="">Resume Maker</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="{%url 'job'%}">Find Job</a>
+                                </p>
+    <p align="justify">
+
+        <a style="color:white "  href="{%url 'faq'%}">FAQ</a>
+                                </p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 mb-30">
+                        <div class="footer-widget">
+                            <div class="footer-widget-heading">
+                                 <h3 style="color:#ff4500">Follow Us</h3>
+                            </div>
+<div class="footer-text">
+ <div class="footer-social-icon">
+                               <a style="margin-top:2px" href="https://twitter.com/intern_worlds"><i class="fab fa-twitter twitter-bg"></i></a>
+                                <a style="margin-top:2px" href="https://www.linkedin.com/in/intern-worlds-3286b6228/"><i class="fab fa-linkedin linkedin-bg"></i></a>
+
+                              <a style="margin-top:2px" href="https://www.linkedin.com/in/intern-worlds-3286b6228/"><i class="fab fa-instagram youtube-bg"></i></a>
+   </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-area" STYLE="background:BLACK:>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 mx-left">
+                        <div class="copyright-text">
+                            <p style="color:#ff4500;text-align:center;" >Copyright &copy;  <a style="color:#ff4500" href="https://sparsematrix.co.in/"> eSparse Matrix Solutions Pvt Ltd.  </a> All Rights Reserved. 2021</p>
+                        </div>
+                    </div>
+
+
+                    </div>
+                    </div>
+                </div>
+
+    </footer>
+
+<!-- end cont stats -->
+
+<script>
+    (function ($) {
+   $.fn.countTo = function (options) {
+      options = options || {};
+
+      return $(this).each(function () {
+         // set options for current element
+         var settings = $.extend({}, $.fn.countTo.defaults, {
+            from:            $(this).data('from'),
+            to:              $(this).data('to'),
+            speed:           $(this).data('speed'),
+            refreshInterval: $(this).data('refresh-interval'),
+            decimals:        $(this).data('decimals')
+         }, options);
+
+         // how many times to update the value, and how much to increment the value on each update
+         var loops = Math.ceil(settings.speed / settings.refreshInterval),
+            increment = (settings.to - settings.from) / loops;
+
+         // references & variables that will change with each update
+         var self = this,
+            $self = $(this),
+            loopCount = 0,
+            value = settings.from,
+            data = $self.data('countTo') || {};
+
+         $self.data('countTo', data);
+
+         // if an existing interval can be found, clear it first
+         if (data.interval) {
+            clearInterval(data.interval);
+         }
+         data.interval = setInterval(updateTimer, settings.refreshInterval);
+
+         // initialize the element with the starting value
+         render(value);
+
+         function updateTimer() {
+            value += increment;
+            loopCount++;
+
+            render(value);
+
+            if (typeof(settings.onUpdate) == 'function') {
+               settings.onUpdate.call(self, value);
+            }
+
+            if (loopCount >= loops) {
+               // remove the interval
+               $self.removeData('countTo');
+               clearInterval(data.interval);
+               value = settings.to;
+
+               if (typeof(settings.onComplete) == 'function') {
+                  settings.onComplete.call(self, value);
+               }
+            }
+         }
+
+         function render(value) {
+            var formattedValue = settings.formatter.call(self, value, settings);
+            $self.html(formattedValue);
+         }
+      });
+   };
+
+   $.fn.countTo.defaults = {
+      from: 0,               // the number the element should start at
+      to: 0,                 // the number the element should end at
+      speed: 1000,           // how long it should take to count between the target numbers
+      refreshInterval: 100,  // how often the element should be updated
+      decimals: 0,           // the number of decimal places to show
+      formatter: formatter,  // handler for formatting the value before rendering
+      onUpdate: null,        // callback method for every time the element is updated
+      onComplete: null       // callback method for when the element finishes updating
+   };
+
+   function formatter(value, settings) {
+      return value.toFixed(settings.decimals);
+   }
+}(jQuery));
+
+jQuery(function ($) {
+  // custom formatting example
+  $('.count-number').data('countToOptions', {
+   formatter: function (value, options) {
+     return value.toFixed(options.decimals).replace(/\B(?=(?:\d{3})+(?!\d))/g, ',');
+   }
+  });
+
+  // start all the timers
+  $('.timer').each(count);
+
+  function count(options) {
+   var $this = $(this);
+   options = $.extend({}, options || {}, $this.data('countToOptions') || {});
+   $this.countTo(options);
+  }
+});
+</script>
+<script>$('.carousel.carousel-multi .carousel-item').each(function () {
+   var next = $(this).next();
+   if (!next.length) {
+      next = $(this).siblings(':first');
+   }
+   next.children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+
+   if (next.next().length > 0) {
+      next.next().children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
+   }
+   else {
+      $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+   }
+});</script>
+</body>
+</html>
+

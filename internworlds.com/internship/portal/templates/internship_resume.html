@@ -1,0 +1,89 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Resume Details
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+      {% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+            <h3 class="animate__animated animate__zoomIn" align="center">INTERNSHIP RESUME </h3>
+
+
+                    <table>
+
+
+                    <tr>
+                        <th style="background: #FF4433;">First Name</th>
+                        <th style="background: #FF4433;">Last Name</th>
+                        <th style="background: #FF4433;">Email Address</th>
+                        <th style="background: #FF4433;">Phone</th>
+                        <th style="background: #FF4433;">Hometown</th>
+                        <th style="background: #FF4433;">City</th>
+                        <th style="background: #FF4433;">Field</th>
+                        <th style="background: #FF4433;">Actions</th>
+                    </tr>   {% for item in all_details %}<tr>
+                    <td>{{ item.fname }}</td>
+
+
+
+                        <td>{{ item.lname }}</td>
+
+
+
+                            <td>{{ item.email }}</td>
+
+
+
+                        <td>
+
+                            {{ item.phone }}</td>
+
+
+
+                        <td>
+                            {{ item.hometown }}</td>
+
+
+
+                        <td>
+                    {{ item.city }}
+                        </td>
+                        <td>{{ item.field }}</td>
+                        <td>
+                            <button type="button"  style="width:100px;height:30px;color:#ffdd99;
+  background: #5E8C88;border-radius:10px">
+  <a style="color: white" href="{% url 'internship_resume_detail' item.id %}"  > View
+  </a></button>
+                        </td>
+                    </tr>
+ {% empty %}
+    <tr><td colspan="6" class="text-center">No Record Found</td></tr>
+  {% endfor %}
+
+
+
+
+                    </table>
+        </div>
+
+
+
+<br/>
+
+    </div>
+</div>
+
+
+
+{%endblock%}

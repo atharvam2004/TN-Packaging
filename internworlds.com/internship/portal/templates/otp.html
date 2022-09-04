@@ -1,0 +1,104 @@
+<DOCTYPE html>
+    {%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Internship | Internships in Pune – InternWorlds">
+<meta name="description" content="InternWorlds is an online portal that provides the best internship opportunities in India. Such as Summer Internships, Virtual Internships, Paid Internships, and many more.">
+<meta name="keywords" content="Internship, Internships, Internship in India, summer internship, paid internship, Digital Marketing Course in India,  virtual Internships, MBA Internships, Office Internships, Internship in pune, Internship in Mumbai, Learn Digital Marketing Course in India, Online Courses, Internship Opportunities in India">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content=" eSparse Matrix Solutions Pvt. Ltd.">
+    <title>Intern Worlds</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{%static 'css/style-starter.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}// Hide After 5 Secs Animation
+
+body > div{
+    border:1px solid grey;
+}
+html, body, #container {
+    height:100%;
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#container {
+    overflow:hidden;
+    position:relative;
+}
+#hideMe {
+    -webkit-animation: cssAnimation 5s forwards;
+    animation: cssAnimation 5s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    90%  {opacity: 1;}
+    100% {opacity: 0;}
+}
+</style>
+<body>
+
+<div class="container my-3">
+
+<form class="form-signin" action="/otp" method="POST">
+     {% if messages %}
+  <div id='hideMe'>>
+    {% for message in messages %}
+
+    <p class="p-2 mb-2 bg-success text-white hideMe" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+  </div>
+              {% endif %}
+{% csrf_token %}
+      <h1 class="h3 mb-3 font-weight-normal" align="center" style="margin-top:150px"> Enter Your OTP</h1>
+      <label for="inputEmail" class="sr-only">Enter OTP</label>
+      <input type="text" name="otp" id="inputEmail" maxlength="6" class="form-control my-2" placeholder="Enter OTP" required autofocus>
+      <button style="margin-top:20px;border-radius:130px" class="btn btn-sm btn-primary btn-block" name="verify" type="submit">Verify</button>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+
+
+
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Company View
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents" style="margin-top:50px">
+        <div>
+
+
+
+    <div class="form-style-3" >
+<form method="POST" >
+{% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+{% csrf_token %}
+        <fieldset style="background:white;" ><legend legend style="color: white;
+    background: #FF4433;">EDIT PROFILE</legend>
+
+            {% for query in profile %}
+                <label style="color: #5E8C88"><span>USER NAME <span class="required">*</span></span>
+
+                    <input style="border-radius:30px; " type="TEXT" class="input-field" name="username" value="{{query.username}}"/></label>
+                             <label style="color: #5E8C88"><span>COMPANY NAME <span class="required">*</span></span>
+                                 <input style="border-radius:30px " type="text" class="input-field"  name="organization_name" value="{{query.organization_name}}"/></label>
+                                             <label style="color: #5E8C88"><span>About Company <span class="required">*</span></span>
+                                                 <input style="border-radius:30px " type="text" class="input-field"  name="organization_description" value="{{query.organization_description}}"/></label>
+                                           <label style="color: #5E8C88"><span>Mobile <span class="required">*</span></span>
+                                               <input style="border-radius:30px " type="text" class="input-field"  name="phone" value="{{query.phone}}"/></label>
+		                             <label style="color: #5E8C88"><span>ADDRESS <span class="required">*</span></span>
+                                         <input style="border-radius:30px " type="text" class="input-field"  name="address" value="{{query.address}}"/></label>
+            {% endfor %}
+            <label style="text-align:center"><span> </span><input style="border-radius:30px;color:white;background: #FF4433;" type="submit" value="Save"/>
+        </fieldset></form>
+
+    </div></div>
+    </div>
+</div>
+
+
+{%endblock%}

@@ -1,0 +1,480 @@
+<!DOCTYPE>
+
+    {%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ <meta name="title" content="Internship | Internships in Pune – InternWorlds">
+<meta name="description" content="InternWorlds is an online portal that provides the best internship opportunities in India. Such as Summer Internships, Virtual Internships, Paid Internships, and many more.">
+<meta name="keywords" content="Internship, Internships, Internship in India, summer internship, paid internship, Digital Marketing Course in India,  virtual Internships, MBA Internships, Office Internships, Internship in pune, Internship in Mumbai, Learn Digital Marketing Course in India, Online Courses, Internship Opportunities in India">
+<meta name="robots" content="index, follow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="language" content="English">
+<meta name="revisit-after" content="1 days">
+<meta name="author" content=" eSparse Matrix Solutions Pvt. Ltd.">
+    <title>Intern Worlds</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{%static 'css/style-starter.css'%}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>-->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</head>
+<style>
+                /*custom font*/
+        @import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+        /*basic reset*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 100%;
+            background: #6441A5; /* fallback for old browsers */
+            background: -webkit-linear-gradient(to left, #6441A5, #2a0845); /* Chrome 10-25, Safari 5.1-6 */
+        }
+
+
+
+        /*form styles*/
+        #msform {
+            text-align: center;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        #msform fieldset {
+            background: white;
+            border: 0 none;
+            border-radius: 0px;
+            box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+            padding: 20px 30px;
+            box-sizing: border-box;
+            width: 80%;
+            margin: 0 10%;
+            background: #5E8C88;opacity:0.9;
+
+            /*stacking fieldsets above each other*/
+            position: relative;
+        }
+
+        /*Hide all except first fieldset*/
+        #msform fieldset:not(:first-of-type) {
+            display: none;
+        }
+
+        /*inputs*/
+        #msform input, #msform textarea {
+            padding: 15px;
+            border: 1px solid #ccc;
+            background: #ffdd99;
+  border-radius:20px;
+
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: montserrat;
+            color: #2C3E50;
+            font-size: 13px;
+        }
+
+        #msform input:focus, #msform textarea:focus {
+            -moz-box-shadow: none !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            border: 1px solid #ee0979;
+            outline-width: 0;
+            transition: All 0.5s ease-in;
+            -webkit-transition: All 0.5s ease-in;
+            -moz-transition: All 0.5s ease-in;
+            -o-transition: All 0.5s ease-in;
+        }
+
+        /*buttons*/
+        #msform .action-button {
+            width: 100px;
+            background: black;
+            font-weight: bold;
+            color: white;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button:hover, #msform .action-button:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #ee0979;
+        }
+
+        #msform .action-button-previous {
+            width: 100px;
+            background: white;
+            font-weight: bold;
+            color: black;
+
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 10px 5px;
+            margin: 10px 5px;
+        }
+
+        #msform .action-button-previous:hover, #msform .action-button-previous:focus {
+            box-shadow: 0 0 0 2px white, 0 0 0 3px #C5C5F1;
+        }
+        .form{
+            padding:0% 20% 0% 20%;
+        }
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+
+        /*headings*/
+        .fs-title {
+            font-size: 18px;
+            text-transform: uppercase;
+            color: #2C3E50;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+
+        .fs-subtitle {
+            font-weight: normal;
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        /*progressbar*/
+        #progressbar {
+            margin-bottom: 30px;
+            overflow: hidden;
+            /*CSS counters to number the steps*/
+            counter-reset: step;
+        }
+
+        #progressbar li {
+            list-style-type: none;
+            color: black;
+            text-transform: uppercase;
+            font-size: 9px;
+            width: 33.33%;
+            float: left;
+            position: relative;
+            letter-spacing: 1px;
+        }
+
+        #progressbar li:before {
+            content: counter(step);
+            counter-increment: step;
+            width: 24px;
+            height: 24px;
+            line-height: 26px;
+            display: block;
+            font-size: 12px;
+            color: #333;
+            background: white;
+            border-radius: 25px;
+            margin: 0 auto 10px auto;
+        }
+
+        /*progressbar connectors*/
+        #progressbar li:after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: white;
+            position: absolute;
+            left: -50%;
+            top: 9px;
+            z-index: -1; /*put it behind the numbers*/
+        }
+
+        #progressbar li:first-child:after {
+            /*connector not needed before the first step*/
+            content: none;
+        }
+
+        /*marking active/completed steps green*/
+        /*The number of the step and the connector before it = green*/
+        #progressbar li.active:before, #progressbar li.active:after {
+            background: black;
+            color: white;
+        }
+
+
+        /* Not relevant to this form */
+        .dme_link {
+            margin-top: 30px;
+            text-align: center;
+        }
+        .dme_link a {
+            background: #FFF;
+            font-weight: bold;
+            color: #ee0979;
+            border: 0 none;
+            border-radius: 25px;
+            cursor: pointer;
+            padding: 5px 25px;
+            font-size: 12px;
+        }
+
+        .dme_link a:hover, .dme_link a:focus {
+            background: #C5C5F1;
+            text-decoration: none;
+        }
+
+
+
+.second-div{
+    margin-top:60px;
+
+}
+.row{
+     margin-left:0px!important;
+     margin-right:0px!important;
+}
+
+/* allignment of login dropdown items */
+.dropdown-item{
+       text-align: center;
+ }
+
+@media (min-width: 992px)
+{
+  .dropdown-item{
+       text-align: left;
+ }
+}
+
+@media (min-width: 1200px)
+{
+  .dropdown-item{
+       text-align: left;
+ }
+}
+
+@media (max-width: 565px)
+{
+  .form{
+            padding:0% 10% 0% 10%;
+        }
+}
+ .navbar-brand {
+    width: 80px;
+}
+    </style>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top "
+     style="background-color: white">
+  <a class="navbar-brand mx-left" href="{%url 'index'%}">
+      <img src="{%static 'images/esparse.jpg'%}" style="border-radius:20px;" width=80% ></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse"
+  data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto" id="menulist" >
+<li class="nav-item active">
+        <a class="nav-link  w3-button" style="color:black" href="{%url 'index'%}" >Home </a>
+      </li>
+      
+           <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'show_internship'%}">Internship<span class="sr-only">(current)</span>
+        </a>
+      </li>
+        <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'job'%}">Jobs<span class="sr-only">(current)</span></a>
+      </li>
+
+
+
+        <li class="nav-item active">
+        <a class="nav-link"style="color:black"  href="{%url 'blog_page'%}">Blog
+            <span class="sr-only">(current)</span></a>
+      </li>
+           <li class="nav-item active">
+        <a class="nav-link" style="color:black" href="{%url 'associate'%}">Associate
+            <span class="sr-only">(current)</span></a>
+      </li>
+	  <li class="nav-item active">
+        <a class="nav-link  w3-button" style="color:black" href="{%url 'makeresume'%}" >Resume Builder</a>
+      </li>
+    </ul>
+     <ul class="nav navbar-nav mx-right">
+              <div class="dropdown" >
+  <button  style="border-radius:15px;background:#FF4500;font-style:bold;
+  color: white" class="btn  dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <b>Login</b>
+  </button>
+
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{%url 'login'%}">User</a>
+    <a class="dropdown-item" href="{%url 'companylogin'%}">Company</a>
+  </div>
+</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+          </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+<div class="row second-div" style="margin-top:80px">
+    <div class="col-md-12 col-md-offset-3 form" >
+        <form id="msform" action="" method="post" >
+            {% csrf_token %}
+            <!-- progressbar -->
+            <ul  id="progressbar">
+                <li class="active li1">Personal Details</li>
+                <li class="li1">Organization Details</li>
+                <li>Social Links</li>
+            </ul>
+
+{% if messages %}
+
+    {% for message in messages %}
+    <p class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+            <!-- fieldsets -->
+            <fieldset style="background:#FF4500;">
+                <h1 style="color:white" class="fs-title">Personal Details</h1>
+                <input style="background:white" type="text" name="username" placeholder="User Name" required/>
+                <input  style="background:white" required  type="email" name="email" placeholder="Email" required/>
+                <input  style="background:white" required type="password" name="password" placeholder="Password" required minlength="8" maxlength="8"/>
+
+
+
+                <input style="border-radius:15px;background:#ffdd99;font-style:bold;
+  color: white;background:black" type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset style="background:#FF4500;">
+                <h1 style="color:white" class="fs-title">Organization Details</h1>
+               <input  style="background:white" required type="text" name="organization_name" placeholder="Organization Name" required/>
+                <textarea  style="background:white" required name="organization_description" placeholder="Organization Description" required></textarea>
+<label for="myfile">Organization Logo</label>
+               <input   style="background:white" type="file" id="myfile" name="organization_logo" required placeholder="Upload Your Logo" required><br>
+
+                <input style="border-radius:15px;font-style:bold;
+  color: black;background:white"  type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input style="border-radius:15px;background:#ffdd99;font-style:bold;
+  color: white;background:black" type="button" name="next" class="next action-button" value="Next"/>
+            </fieldset>
+            <fieldset style="background:#FF4500;">
+                <h1 style="color:white" class="fs-title">Location and Links</h1>
+               <input  style="background:white" required type="number" name="phone" placeholder="Phone Number" required/>
+                <input  style="background:white" required type="text" name="address" placeholder="Address" required/>
+                <input  style="background:white" required type="text" name="organization_website" placeholder="Organization Website" required/>
+
+                <input style="border-radius:15px;font-style:bold;
+  color: black;background:white" type="button" name="previous" class="previous action-button-previous" value="Previous"/>
+                <input style="border-radius:15px;font-style:bold;
+  color: white;background:black" type="submit" name="submit" class="submit action-button" value="Submit"/>
+            </fieldset>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    //jQuery time
+    var current_fs, next_fs, previous_fs; //fieldsets
+    var left, opacity, scale; //fieldset properties which we will animate
+    var animating; //flag to prevent quick multi-click glitches
+
+    $(".next").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        next_fs = $(this).parent().next();
+
+        //activate next step on progressbar using the index of next_fs
+        $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+        //show the next fieldset
+        next_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale current_fs down to 80%
+                scale = 1 - (1 - now) * 0.2;
+                //2. bring next_fs from the right(50%)
+                left = (now * 50)+"%";
+                //3. increase opacity of next_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({
+            'transform': 'scale('+scale+')',
+            'position': 'absolute'
+          });
+                next_fs.css({'left': left, 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+    $(".previous").click(function(){
+        if(animating) return false;
+        animating = true;
+
+        current_fs = $(this).parent();
+        previous_fs = $(this).parent().prev();
+
+        //de-activate current step on progressbar
+        $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+        //show the previous fieldset
+        previous_fs.show();
+        //hide the current fieldset with style
+        current_fs.animate({opacity: 0}, {
+            step: function(now, mx) {
+                //as the opacity of current_fs reduces to 0 - stored in "now"
+                //1. scale previous_fs from 80% to 100%
+                scale = 0.8 + (1 - now) * 0.2;
+                //2. take current_fs to the right(50%) - from 0%
+                left = ((1-now) * 50)+"%";
+                //3. increase opacity of previous_fs to 1 as it moves in
+                opacity = 1 - now;
+                current_fs.css({'left': left});
+                previous_fs.css({'transform': 'scale('+scale+')', 'opacity': opacity});
+            },
+            duration: 800,
+            complete: function(){
+                current_fs.hide();
+                animating = false;
+            },
+            //this comes from the custom easing plugin
+            easing: 'easeInOutBack'
+        });
+    });
+
+</script>
+</body>
+</html>
+

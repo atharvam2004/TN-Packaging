@@ -1,0 +1,133 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+View Job Details
+{%endblock%}
+
+{%block content%}<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+      {% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+            <h3 class="animate__animated animate__zoomIn" align="center">View Job Details</h3>
+
+
+            {% for item in job_detail %}
+                    <table>
+                    <tr>
+                    <th style="background: #5E8C88">Company name</th>
+                    <td>{{ item.company_name }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Email-Address</th>
+                        <td>{{ item.email_address }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Job Type</th>
+                            <td>{{ item.job_type }}</td>
+
+                    </tr>
+                    <tr>
+                        <th style="background: #5E8C88">Job Title</th>
+                        <td>
+
+                            {{ item.job_title }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Required Skill</th>
+                        <td>
+                            {{ item.required_skill }}</td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Experience Requirements</th>
+                        <td>
+                    {{ item.experience_requirements }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Job Description</th>
+                        <td>
+                    {{ item.job_description }}"
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Responsibilities</th>
+                        <td>
+                     {{ item.responsibilities }}
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th style="background: #5E8C88">Qualification</th>
+                        <td>
+                    {{ item.required_qualification }}
+                        </td>
+                    </tr>
+ <tr>
+                        <th style="background: #5E8C88">About Company</th>
+                        <td>
+                    {{ item.about_company }}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #5E8C88">Stipend</th>
+                        <td>
+                    {{ item.stipend}}
+                        </td>
+                    </tr>
+ <tr>
+                        <th style="background: #5E8C88">No of Positions</th>
+                        <td>
+                    {{ item.no_of_positions}}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #5E8C88">Application Deadline</th>
+                        <td>
+                    {{ item.application_deadline}}
+                        </td>
+                    </tr>
+                           <tr>
+                        <th style="background: #5E8C88">Work Mode</th>
+                        <td>
+                    {{ item.work_mode}}
+                        </td>
+                    </tr>
+                         <tr>
+                        <th style="background: #5E8C88">Location</th>
+                        <td>
+                    {{ item.location}}
+                        </td>
+                    </tr>
+                    </table>
+        </div>
+
+
+<br/>
+         <button style="width:150px;margin-left:230px;height:40px;
+         background:#ffdd99;border-radius:5px"><a style="color:#5E8C88;" href="{% url 'update_job' item.id %}"  >Edit</a></button>
+        <button style="width:150px;height:40px;background-color:#ffdd99;color:white;border-radius:5px"><a style="color:#5E8C88;" href="{% url 'delete_job' item.id %}"  >Delete</a></button>
+
+          {% endfor %}
+    </div>
+</div>
+
+
+
+  <!-- //script for testimonials -->
+
+
+{%endblock%}

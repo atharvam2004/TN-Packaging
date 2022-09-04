@@ -1,0 +1,193 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+Resume Details
+{%endblock%}
+
+{%block content%}
+<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+              {% if messages %}
+
+    {% for message in messages %}
+    <p style="background-color:green" class="p-2 mb-2 bg-success text-white" style="background-color:green">{{message}}</p>
+    {% endfor %}
+
+              {% endif %}
+            <h3 class="animate__animated animate__zoomIn" align="center">JOB RESUME DETAILS</h3>
+
+            <div id="container6">
+                <div class="row">
+  <div class=" one col-md-4" style="border:1px solid black"><p>
+              {% for item in all_details %}
+               <p style="font-size:20px;text-align:center"> {{item.fname}}</p>
+      <hr>
+        <p  style="background:black;color:white;font-size:15px;"> <u>PERSONAL DETAILS</u></p>
+            <ul class="list-group" style="background:black;color:white">
+            <li class="list-group-item active" aria-current="true"><i class="fa fa-envelope" ></i>
+                <a style="color:white" href="#">{{item.email}}</a></li>
+            <li class="list-group-item"><i class="fa fa-phone" ></i>
+                <a style="color:white;" href="tel:{{item.phone}}">{{item.phone}}</a></li>
+            <li class="list-group-item active"><i class="fa fa-building" ></i>
+                <a style="color:white" href="#">{{item.hometown}},{{item.city}}</a></li>
+
+</ul>
+                   <p style="margin-left:10px;font-size:15px"> <u>SOCIAL LINKS</u></p>
+
+    <ul class="list-group">
+
+                {% if item.blog_links == '' %}
+                no reord {%else%}
+            <li class="list-group-item active" aria-current="true">Blog Links:
+                <a style="color:black" href="#">{{item.blog_links}}</a></li>{%endif%}
+
+                {% if item.gitHub_profile == '' %}Empty {%else%}
+            <li class="list-group-item">GitHub Profile:
+                <a style="color:black" href="#">{{item.gitHub_profile}}  </a></li>{%endif%}
+    <p>code is not runining</p>
+                {% if item.play_store_link == '' %}{%else%}
+            <li class="list-group-item active">Play Store Link:
+                <a style="color:black" href="#">{{item.play_store_link}}</a></li>{%endif%}
+
+                {% if item.behance_portfolio == '' %}{%else%}
+            <li class="list-group-item">Behance Portfolio:
+                <a style="color:black" href="#">{{item.behance_portfolio}}</a></li>{%endif%}
+
+                {% if item.other_work_sample == '' %}{%else%}
+            <li class="list-group-item active">Other Links:
+                <a style="color:black" href="#">{{item.other_work_sample}}</a></li>:{%endif%}
+
+    </ul>
+    <p style="margin-left:10px;font-size:15px"> <u>SKILLS</u>{{item.skills}}</p>
+      <button type="button" style="width:100px;margin-bottom:20px;border-radius:5px;background-color:black;color:black;margin-left:auto;margin-right:auto;display:block">
+  <a style="color: white" href="{% url 'delete_resume' item.id %}"  > Delete
+  </a></button>
+   </div>
+
+
+  <div class="two col-md-8" style="border:1px solid black">
+      <div style="background:black;color:white;font-size:16px;" class="p-3 mb-2 bg-primary text-white;animate__animated animate__zoomIn">
+
+    QUALIFICATIONS</div>
+                   <P style="font-size:15px;margin-left:10px"> <u>SCHOOL EDUCATION DETAILS</u></P>
+
+<table class="table table-sm table-dark" style="margin-left:10px;border:1px solid black;margin-top:10px">
+  <thead>
+    <tr style="background:black">
+      <th style="color:white" scope="col">Class</th>
+              <th style="color:white" scope="col">Name of School</th>
+
+      <th style="color:white" scope="col">Percentage</th>
+              <th style="color:white" scope="col">Passing Year</th>
+
+    </tr>
+  </thead>
+  <tbody>
+        {% if item.seniorsecondary is None %}
+    <tr>
+      <th scope="row">X</th>
+      <td>{{item.secondary_class}}</td>
+      <td>{{item.secondary_percentage}}</td>
+      <td>{{item.secondary_year}}</td>
+    </tr>
+    <tr>
+      <th scope="row">XII</th>
+     <td>{{item.seniorsecondary}}</td>
+      <td>{{item.seniorecondary_percentage}}</td>
+      <td>{{item.seniorsecondary_year}}</td>
+    </tr>
+    {% endif%}
+
+  </tbody>
+</table>
+
+                                     <p style="margin-left:10px;font-size:15px"> <u>HIGHER EDUCATION DETAILS</u></p>
+
+
+<table class="table table-sm table-dark"
+       style="margin-left:10px;border:1px solid black;margin-top:10px">
+  <thead>
+    <tr style="background:black">
+      <th style="color:white" scope="col">Degree</th>
+              <th style="color:white" scope="col">Name of University</th>
+
+      <th style="color:white" scope="col">Percentage/CGPA</th>
+              <th style="color:white" scope="col">Passing Year</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+
+      <td>{{item.graduation_field}}</td>
+      <td>{{item.graduation_college}}</td>
+      <td>{{item.graduation_year}}</td>
+        <td>{{item.grad_percentage}}</td>
+    </tr>
+    <tr>
+     <td>{{item.post_graduation_field}}</td>
+      <td>{{item.post_graduation_college}}</td>
+      <td>{{item.post_graduation_year}}</td>
+        <td>{{item.post_graduation_percentage}}</td>
+
+    </tr>
+<tr>
+     <td>{{item.Diploma_field}}</td>
+      <td>{{item.Diploma_college}}</td>
+      <td>{{item.Diploma_year}}</td>
+        <td>{{item.Diploma_percentage}}</td>
+
+    </tr>
+  <tr>
+     <td>{{item.Phd_field}}</td>
+      <td>{{item.Phd_college}}</td>
+      <td>{{item.Phd_year}}</td>
+        <td>{{item.Phd_percentage}}</td>
+
+    </tr>
+  </tbody>
+</table>  <hr/>
+
+                  <br/>
+         <div style="background:black;color:white;font-size:16px" class="p-3 mb-2 bg-primary text-white;animate__animated animate__zoomIn">
+
+    JOBS & EXPERIENCE</div>
+                  <P style="margin-left:10px;font-size:215x"> <u>TRANNING AND COURSES</u></P>
+{{item.trainings_field}}
+                  <br/>
+                  <B style="margin-left:10px">JOBS</B><br/>
+      <p style="margin-left:10px">COMPANY NAME :{{item.Job_company_name}},{{item.Job_location}}</p>
+      <p style="margin-left:10px">DESIGNATION:{{item.Job_designation}}</p>
+
+                                  <p style="margin-left:10px"> DATE: {{item.Job_joining_date}} to {{item.Job_relieving_date}}
+                                  </p>
+        <br/>   <B style="margin-left:10px">INTERNHSIPS</B><br/>
+      <p style="margin-left:10px"> COMPANY NAME :{{item.Internships_company_name}},{{item.Internships_location}}</p>
+      <p style="margin-left:10px"> DESIGNATION:{{item.Internship_designation }}</p>
+
+      <p style="margin-left:10px">DATE: {{item.Internships_joining_date}} to {{item.Internships_relieving_date }}</p>
+  <br/>
+         <div style="background:black;color:white;font-size:16px" class="p-3 mb-2 bg-primary text-white;animate__animated animate__zoomIn">
+             PROJECTS DETAILS</div>
+                  <table class="table table-sm table-dark" style="margin-left:10px;border:1px solid black;margin-top:10px">
+                      <tr style="background:black">
+                          <th  style="color:white">Name Of the Project</th>
+                          <th  style="color:white" >Project Description</th>
+                          </tr>
+                      <tr>
+                          <th style="background:white;color:black">{{item.personal_projects_topic}}</th>
+                          <th style="background:white;color:black">{{item.personal_projects_description}}</th>
+                      </tr>
+
+                  </table>
+
+          {% endfor %}
+   </div>
+                </div>
+    </div>
+
+
+{%endblock%}

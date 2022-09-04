@@ -1,0 +1,9 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/aukii1ov3h6r/public_html/internworlds.com/internship"
+PassengerBaseURI "/"
+PassengerPython "/home/aukii1ov3h6r/virtualenv/public_html/internworlds.com/internship/3.7/bin/python"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION BEGIN
+<IfModule Litespeed>
+</IfModule>
+# DO NOT REMOVE OR MODIFY. CLOUDLINUX ENV VARS CONFIGURATION END

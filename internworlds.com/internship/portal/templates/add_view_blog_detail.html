@@ -1,0 +1,66 @@
+{% extends "companyheader.html"%}
+{%load static%}
+{% block title %}
+View Blogs
+{%endblock%}
+
+{%block content%}<div class="new-wrapper">
+
+	<div id="main">
+
+		<div id="main-contents">
+  {% if messages %}
+  <div id='hideMe'>>
+    {% for message in messages %}
+
+    <p class="p-2 mb-2 bg-success text-white hideMe" style="background-color:black;color:white">{{message}}</p>
+    {% endfor %}
+  </div>
+              {% endif %}
+            <h3 class="animate__animated animate__zoomIn" align="center">BLOGS DETAILS</h3>
+
+       <!-- Topic Cards -->
+                                   {% for blog in all_blog%}
+
+
+            <div class="row">
+
+                <div class="col-md-12">
+
+                        <div class="card-flyer">
+                            <div class="text-box">
+                                <div class="image-box">
+                                    <img src="{{blog.uploads.url}}" width="400px" alt="" />
+                                </div>
+                                <div class="text-container">
+                                    <h4>Title :{{blog.title}}</h4>
+                                   <p align="left">
+                                        Sub_title={{blog.sub_title}}</p>
+                                <p align="left">
+                                        Description={{blog.description}}</p>
+</div>
+ <button style="width:150px;margin-left:230px;height:40px;background-color:black;color:white;border-radius:5px"><a style="color: white" href="{%url 'update_blog' blog.id %}"  >Edit</a></button>
+        <button style="width:150px;height:40px;background-color:black;color:white;border-radius:5px"><a style="color: white" href="{%url 'delete_blog' blog.id %}"  >Delete</a></button>
+
+                            </div>
+                            </div>
+                        </div>
+
+                </div>
+{%endfor%}
+            </div>
+        </div>
+    </div>
+
+                   <!-- Topic Cards -->
+
+    </div>
+
+    </div>
+
+
+
+
+    </div>
+{%endblock%}
+
